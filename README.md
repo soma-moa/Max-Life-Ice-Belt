@@ -1,254 +1,221 @@
-# Max-Life-Ice-Belt — Sacrificial Self-Regenerating Bio-Armor and Aero Ablative System with Clamping Scaffold for Permanent Seawater Contact Structures, Icebreaker Deck Splash/Bow/Stern (v1.97 Prior-Art Refined Baseline)
+# Max-Life-Ice-Belt — A Literature Review on Sacrificial Surface Layers for Marine, Polar and Rotating-Machinery Applications
 
-* Official Document Classification: Defensive Publication / Prior Art Technical Specification
-* First Conceived: 2026-09-02 / Final Revision (v1.97): 2026-10-01
-* Original Intellectual Property (IP) Holder: soma-moa (Conceiver: deundeuni)
-* Official Repository: github.com/soma-moa/Max-Life-Ice-Belt | Official Domain: somamoa.ai.kr
-* Applied Licenses: Dual-licensing scheme under Creative Commons Attribution 4.0 International (CC BY 4.0) & Apache License 2.0 (Apache-2.0) (The former DPL v1.0 was fully replaced by this standard dual-license as of September 27, 2026)
-* Primary Governing Language Notice: The Korean original text serves as the primary legally and technically binding source, while this English translation is provided for reference purposes only. In the event of any conflict of interpretation, the Korean original text shall prevail.
-
----
-
-## 0. Founder Statement and Motivation
-
-### 0.1 Field-Driven Motivation
-This structural design originated from a practical problem observed in industrial operations: "The outer sections of the deck exposed to seawater, as well as the bow and stern of icebreakers, are constantly cracking and wearing down, and this cannot be permanently prevented merely by repainting or replacing steel plates."
-Conventional marine anti-fouling technologies have approached attaching organisms—such as barnacles, mussels, and oysters—strictly as targets for total removal and prevention. This invention reverses that perspective: by encompassing artificial induction, unmanaged natural colonization, spontaneous bio-adhesion without biological inducers, and synthetic $CaCO_3$ mimetics, it redefines attaching organisms and calcareous formations as a "Sacrificial Layer" that intentionally fractures upon impact to absorb mechanical energy and friction. Consequently, even when the outer sacrificial layer is destroyed by physical impacts, the underlying mechanical skeleton remains intact, enabling a 'survival armor' mechanism where the surface biological layer continuously regenerates. By adopting the detachable rolling and clamping mechanism validated in the CWP battery swap module series for the underlying framework, a survival-oriented protective structure is established without requiring direct welding on the hull or primary structure.
-
-### 0.2 Master Concept & Material Fusion Standard
-The zero-point clamping scaffold attachment method and sacrificial self-regeneration mechanism disclosed herein serve as the master reference framework for the entire protective system.
-This design extends the structural sacrifice concept of automotive passive safety philosophy (Béla Barényi, 1951) to marine and aeronautical environments. All expanded implementation forms—including variations in scaffold materials (steel, aluminum alloys, FR-composites, high-corrosion-resistance alloys), attachment induction methods (surface roughness control, micro-current application, biological inducer coating, natural untended colonization, synthetic $CaCO_3$ mimetic application), attachment thickness ranges, clamping mechanisms (bolted, rolling-lock, permanent/electromagnetic, negative pressure suction), and AI-based adhesion/detachment prediction models—are auxiliary application combinations of this master framework and fall within the comprehensive scope of this prior art disclosure.
-
-* Upper Architecture and APU Integration: The scaffold zero-point fastening and 100ms localized isolation control of Max-Life-Ice-Belt are low-level implementations of the universal survival architecture in `ARCHITECTURE_STRATEGY v3.2.4` and the Tri-State Isolation and T-Reg suppression logic in `chiplet-apu-multi-system-survival-architecture v2.6`.
-
-### 0.3 Zero-Downtime & Non-Welding Principle
-This structural architecture strictly avoids modification work that causes electrical or physical damage (such as high-heat welding or penetrative drilling) to the existing hull plate or marine structure. Even if a localized area of the sacrificial layer is completely destroyed or detached by high-energy ice impact or friction, the system aims for organic, continuous survival (Zero-Downtime) without halting overall protective functionality. The lower scaffold maintains a segmented, independent multi-fastening structure to mitigate single points of failure (SPOF). After the external sacrificial layer is ruptured, the mechanical scaffold framework retains its original shape, continuously encouraging re-attachment of subsequent biological generations.
-When installing sensors for scaffold condition monitoring, it is a standard principle to apply non-penetrative, non-welded mounting methods (e.g., internal wiring channels within the clamping structure, non-penetrative edge clamping).
-
-### 0.4 Non-Exclusive Interoperability & Universal Open Standard
-This technical specification is not proprietary to any specific shipyard, classification society, specialty paint manufacturer, or marine structure geometry. It operates as a universal open standard, referencing public surface treatment and corrosion management standards (such as ISO 8501), ice-belt structural rules of classification societies, and public research standards regarding marine organism adhesion induction.
-
-### 0.5 Field-Based Priority Control Principle
-In extreme environments where impact overloads exceed physical limits, the system prioritizes maintaining the physical retention and hull adhesion of the lower scaffold skeletal framework. Secondary protective goals, such as maintaining perfect surface geometry of the sacrificial layer, are progressively sacrificed or suppressed to prevent direct impact transmission to the primary hull plate and ensure control continuity. This system does not guarantee absolute or permanent protection; its practical goal is to physically extend maintenance and replacement cycles as far as achievable.
-
-### 0.6 Universal Application Scope & Aero/Rotor Extensions
-This design mechanism is broadly applicable to the outer protective layers of all marine structures subjected to dynamic seawater contact, ice collision, and salt spray—including polar icebreakers, commercial vessel collision zones, bulwark splash belts, breakwater fronts, offshore wind foundations (including lower landing platforms), floating offshore plants (FLNG/FPSO), and CWP mooring units.
-Furthermore, when extending this mechanism to aeronautical and rotating structures, symmetric self-balancing ablation and zero-tool quick replacement cartridges with one-touch clamping slots can be selectively combined to mitigate dynamic unbalance caused by localized detachment.
-
-### 0.7 Purpose of Publication & Legal Status Notice
-This document is a defensive publication intended to prevent private patent monopolization and establish technology in the public domain. Numerical values, functions, physical configurations, and expected performance descriptions herein are illustrative explanations of technical concepts and do not limit specific implementations or guarantee absolute performance. This system does not replace, alter, or exempt compliance with statutory class inspection standards, MARPOL, IMO conventions/guidelines, or national regulations; it serves solely as an auxiliary protective structure. Environmental and biosecurity limitations and compliance recommendations are consolidated in Section 0.9.
-
-### 0.8 Independent Prior Conception Acknowledgment & Modesty Notice
-This system design originated from the conceiver's field problem-solving and was synthesized by combining publicly known principles ($CaCO_3$ biomineralization, sacrificial anodes, automotive crumple zones).
-The conceiver does not claim sole or original conception of every underlying motif and fully acknowledges that similar technical ideas may have been conceived independently by other researchers or field engineers.
-The purpose of this public disclosure is not to secure exclusive patent rights, but to register the technology as public prior art to establish grounds for rejecting novelty and inventive step during third-party patent examinations. The Korean text remains the primary governing original authority; in the event of any translation conflict, the Korean text prevails.
-
-### 0.9 Environmental, Biosecurity & Compliance Notice
-**Scope of Environmental Claims.** The sacrificial layer primarily consists of calcium carbonate derived from biological minerals (barnacles, mussels, oysters) or synthetic $CaCO_3$ mimetics. Upon detachment, it dissolves or disperses as natural calcium carbonate particles, aiming to mitigate synthetic microplastic pollution. This statement is strictly limited to microplastic reduction and does not imply mitigation of invasive species transfer risks. Because this system does not rely on the release of active biocides, its character differs from harmful anti-fouling systems regulated under the IMO AFS Convention. This difference in character does not imply environmental superiority.
-
-**Organism Transfer Potential & Detachment-Dispersal Interaction.** The sacrificial layer includes configurations that intentionally induce or allow natural colonization of attaching organisms. However, biofouling accumulation on ship hulls is identified in IMO Resolution MEPC.207(62) ("2011 Guidelines for the control and management of ships' biofouling to minimize the transfer of invasive aquatic species") as a vector for transferring invasive aquatic species. Additionally, certain jurisdictions enforce strict biofouling regulations on arriving vessels. For example, New Zealand's MPI Craft Risk Management Standard requires a clean hull (permitting only slime layer on most vessel parts), and California enforces biofouling management regulations under CCR Title 2, Section 2298.1 et seq. As specific requirements may be updated, verification prior to arrival is necessary. The bio-colonized configurations disclosed herein may conflict with the objectives of international guidelines and port-state regulations, potentially restricting application along certain routes or ports.
-
-During impact events, fracturing and detachment of the sacrificial layer may release not only individual larvae but also large organism clusters into the water column. Whether such detached clusters can survive and colonize new habitats remains **unverified**, and the quantitative relationship between physical detachment events and alien species spread requires further investigation.
-
-Submerged biofouling layers harbor bio-films composed of bacteria, microalgae, and protozoa alongside macro-organisms, and bivalves (mussels, oysters) are documented to accumulate bacteria and viruses via filter feeding. Literature reports pathogenic *Vibrio parahaemolyticus* isolated from commercial vessel biofouling; however, no direct studies were identified inspecting viruses specifically on external hull biofouling (existing virus literature primarily targets ballast tanks and shellfish in polluted coastal waters). The presence of viruses does not inherently equate to pathogenicity in humans or animals. Nevertheless, this specification does not exclude the possibility of microorganisms and viruses being transported alongside biofouling.
-
-**Environmental Effects per Method.** Biocidal anti-fouling paints may exert chemical impacts on non-target marine life; bio-colonized sacrificial layers carry potential risks of transferring invasive species and microorganisms/viruses; and organism-free ablative cartridges require separate evaluation regarding the environmental fate of detached material (depending on cartridge composition). Fixed structures also require separate environmental assessments regarding the release and accumulation of detached materials in local waters. No single approach eliminates ecological impact possibilities, requiring continuous management by operating entities. This document does not assert environmental superiority among these methods.
-
-**Operational Environment Separation Recommendation.** Restricting colonized organisms strictly to native species is acknowledged to have low practical feasibility due to the uncontrollable nature of planktonic larvae in open seawater. Therefore, implementation forms should be selected based on operational profiles:
-* Fixed Marine Structures (Breakwaters, Offshore Wind Foundations) — Located permanently in a single marine region; prioritizing self-sustaining colonization and bio-induced sacrificial layer embodiments is recommended, subject to local impact assessments of detached materials.
-* Multi-Region Vessels (Icebreaking Merchant Ships, International Vessels) — Prioritizing organism-free precision non-biological ablative cartridge embodiments is recommended to mitigate port-state biosecurity risks and species transfer, accompanied by environmental evaluations of detached cartridge particles.
-
-**Regulatory Compliance Recommendation.** Implementing entities are advised to verify all applicable regulations along their entire navigational routes. Review scope includes IMO conventions/guidelines (AFS, etc.), regional policies (EU Marine Strategy Framework Directive), port-state/coastal-state laws, polar regional environmental regimes, classification rules, and ISO standards. While this specification does not establish hierarchy among regulations, Article 1(3) of the AFS Convention affirms that states may take more stringent measures consistent with international law; thus, the most stringent requirements along the route should be prioritized. Binding statutory regulations strictly supersede the recommendations of this document.
-
-**Implementation Review Items.** In-water cleaning operations have been noted in policy briefs as potentially increasing the release of viable organisms and microorganisms into the water column. Operating entities should exercise caution when selecting cleaning methods, implementing removal/inactivation logging procedures, or adopting organism-free ablative cartridges. The efficacy and regulatory compliance of these measures remain unverified in this specification.
-
-### 0.10 Designer Limitations Notice
-The structural concepts and mathematical models in this specification are subject to the following explicitly acknowledged development limitations:
-* Prior Art Search Boundaries — This design originated from field problem-solving prior to a systematic prior art search. In particular, detailed prior art searches regarding post-attached modules, gradual wear hardness gradients, and non-welded clamping scaffolds have not been conducted.
-* Simplified Physical and Energy Models — The impact energy dissipation models in Section 3 are first-order simplifications based on macro conservation laws and do not fully incorporate ice load pressure-area relationships or micro-crack propagation dynamics (Pressure-area relationship integration — **requires primary source verification**).
-* Unverified Bio-Adhesion and Polar Assumptions — Precise control of bio-inducers and the feasibility of self-sustaining bio-adhesion under polar ice conditions remain **unverified assumptions**.
-* Mechanical Clamping and Simulation Limitations — Direct testing of clamp fatigue under extreme freezing, ice expansion clamping force changes, and explicit dynamics structural crash simulations (such as `LS-DYNA`) have not been performed.
-* Practical Experience Boundaries — The conceiver's direct hands-on experience is limited to sheet metal fabrication, machine processing, and equipment installation. Statements regarding marine and polar engineering are deductions derived from public literature and prior art, requiring formal domain-expert validation.
+* Document type: Prior-art literature review (not an invention or claim document)
+* Revision date: 2026-10-04 (the current revision carries no version number, only a revision date)
+* Compiled by: deundeuni (soma-moa), as a collector and organizer of existing materials
+* Repository: github.com/soma-moa/Max-Life-Ice-Belt | Domain: somamoa.ai.kr
+* License: Creative Commons Attribution 4.0 International (CC BY 4.0) only
+* Language note: The Korean text is the authoritative original. This English version is a reference translation. If the two conflict, the Korean text prevails.
 
 ---
 
-## 1. Version History Summary
+## 0. Correction, Retraction and Nature of This Document
 
-* Current Version: v1.97 (2026-10-01)
-* Recent Changes (v1.97):
-  - Sections 0.3 & 4 Refinement: Established non-penetrative sensor mounting principles; limited Ch. 4 isolation controls strictly to Section 2.5 AI/sensor modules (mechanical structure fault mitigation follows Section 0.3).
-  - Section 0.9 Reorganization: Shifted priority: bio-adhesion type is preferred for fixed structures, while non-biological cartridge type is preferred for multi-region vessels (Rationale: unfeasibility of native-species restriction via planktonic larvae control, port-state biosecurity regulations, and unverified risks of detached cluster dispersal; the difference in direction from the title's emphasis on bio-adhesion armor is an intentional choice). Added impact-assessment caveats for detached materials in each method. Preserved viral pathogen caveats, in-water cleaning cautions, and AFS Article 1(3) references.
-  - Section 0.10 Addition: Established Designer Limitations Notice acknowledging prior art search boundaries (uninvestigated post-attachment/clamping prior art), simplified physical models, unverified polar bio-adhesion, un-tested clamp freezing, unexecuted LS-DYNA simulations, and background limited to sheet metal processing.
-  - Chapter 3.B Refinement: Added gradual wear (hardness gradient) and directional curved scaffold (curvature/angles as design parameters, concave adhesion pockets / convex shedding surfaces, localized wear acceleration trade-offs, scaffold curvature preservation premise) embodiments; bounded bio-fouling scope to "induction potential"; incorporated $E_{ice\_fail}$ energy term into energy balance model; noted hydrodynamic drag/vortex verification requirements; replaced v1.96 LS-DYNA applicability statement with Section 0.10 non-execution disclosure.
-  - Section 8.2 Revision: Cited US4351255, US4715305, US5325803, and Lindqvist (1989) model (pending primary source verification); strictly bounded scope to "embodiments disclosed in this document."
-* Full History (v1.0–v1.97, side-by-side Korean and English): See [HISTORY.md](HISTORY.md) in the repository.
+### 0.1 Corrections to earlier publications
+Earlier publications of this document (up to v1.97, 2026-10-01 and before) contained statements that did not fit its actual nature. This revision retracts the following.
 
----
+* Statements implying originality, inventorship or IP ownership: "inventor," "conceiver," "original IP holder," "first conceived."
+* Statements presupposing the securing of rights: prior-use rights, trade-secret separation, the "quadruple defense architecture."
+* Figures and equations for which no source was verified (100 ms local isolation, a re-colonization growth equation, a crushing-efficiency coefficient for the sacrificial layer, and similar). These entered the text during document drafting without literature support and are not included in this revision.
+* The Apache-2.0 notice and the earlier non-standard license notice. The license is now CC BY 4.0 only.
 
-## 2. Full-Stack Application Architecture Design (3-Tier Architecture)
+The earlier publications remain in the repository history as historical records and should not be read as the content of the current revision.
 
-### [L2] Protective Interface Layer
-* Deck Splash Zone (Zone A) — Mitigates seawater splash, salt spray, and upper ice chunk impacts during high-speed navigation, preventing salt ingress.
-* Bow Zone (Zone B) — Absorbs and disperses direct high-energy impacts and horizontal friction forces from polar sea ice during forward navigation.
-* Stern Zone (Zone C) — Protects propulsion unit housings and rudder surroundings from ice reverse-flow impacts and turbulence friction caused by astern icebreaking and propeller rotation.
-* Aero/Rotor Zone (Zone Aero) — Absorbs particle impact loads on helicopter rotors and aircraft intake fronts via ablative mechanisms, mitigating dynamic unbalance through symmetric self-balancing ablation.
+### 0.2 What this document does and does not do
+This document collects and organizes, by topic, existing public literature, patents, commercial products and regulations that address wear on surfaces in constant contact with seawater and ice (deck splash zones, icebreaker bows and sterns) and on rotating-machinery leading edges. The compiler does not design new technology and does not claim ownership of anything. Credit for each technology belongs 100% to the authors, inventors, institutions and manufacturers of the original sources.
 
-### [L1] Sacrificial & Regenerative Fabric Layer
-* Scaffold Skeleton Structure — A surface textured scaffold framework utilizing CWP-based rolling and clamping fastening techniques to distribute loads uniformly.
-* Armor Surface Layer — Consists of $CaCO_3$ calcareous formations (barnacles, mussels, oysters) derived from intentional attraction, natural untended bio-adhesion, or synthetic $CaCO_3$ mimetics, or precision non-biological ablative cartridges.
-* Regeneration & Quick-Replacement Algorithm — Triggers biological re-attachment induction or estimates zero-tool quick replacement service cycles upon localized detachment.
+The compiler's direct experience is limited to sheet-metal fabrication and plant/equipment construction work. All statements about marine, polar and aviation topics are organizations of public literature and have not been verified by domain experts.
 
-### [L0] Infrastructure & Fastening Layer
-* Structure Base — Includes hull plates, bulwark exteriors, ice-belt stiffeners, propeller duct nozzle exteriors, rudder front protective surfaces, and aircraft rotor frames.
-* Fastening Mechanism — Eliminates base metal welding and penetrative holes, maintaining zero-point retention force via edge clamping, rolling locks, and one-touch slot structures.
+### 0.3 Starting question
+The outer seawater-contact zones of decks and the bows and sterns of icebreakers keep cracking and wearing. Is repainting and replacing steel plate the best that can be done? This document starts from that question and surveys what research and technology already exist around it.
 
-### 2.5 AI Role and Model Structure Definition
-The adhesion and detachment prediction module is not restricted to any specific software framework or algorithm. It is defined as an abstracted predictive entity encompassing on-device edge computing, small language/inference models (SLM), and satellite-linked central analysis models. It processes real-time water temperature, salinity, flow velocity, impact frequency, and rotational unbalance data to dynamically calculate maintenance and replacement cycles.
+### 0.4 Legal status
+This document does not replace, modify or exempt anything from statutory classification surveys, MARPOL, IMO conventions and guidelines, or national regulations. Technical statements herein are summaries of public literature and guarantee neither performance nor suitability.
 
 ---
 
-## 3. Core System Blocks and Operational Mechanisms
+## 1. Prior Literature by Topic
 
-### A. 3-Point Anchor Detection Unit & Aero Detection Unit (Absolute Protection Points)
-* Zone A (Deck Splash Line), Zone B (Bow Ice-belt Line), Zone C (Stern Propulsion Line), and Zone Aero (Rotor Balance Line) are designated as absolute protection points.
+> Verification level markers: **[Full text]** the document, abstract or patent bibliographic record was read; **[Summary]** only a search-result summary or abstract was checked; **[Cited]** confirmed only from another document's citation list. Re-checking against original sources is recommended for every item.
 
-### B. Scaffold-Armor Separated Sacrificial Structure & Engineering Mathematical Modeling
-* External Input Conditions — Simultaneous application of ice collision impacts, seawater friction, salt spray, and high-velocity aero-particle friction.
-* Dynamic Processing Mechanism — Upon impact, the surface calcareous layer (barnacles, mussels, oysters, spontaneous bio-adhesion, synthetic $CaCO_3$ mimetics) or ablative cartridge fractures and detaches, converting kinetic energy into heat and deformation energy. The underlying scaffold remains undamaged.
-* Gradual Wear & Directional Curved Scaffold Embodiments
-    * Gradual Wear Embodiment — To prevent complete layer shedding from a single impact, layers may incorporate a hardness gradient or pre-segmented cells. The wear model transitions dynamically to step-wise depletion based on impact count and friction duration. Pre-segmented wear structures may partially mitigate sudden large-cluster detachment risks, but may increase the total count of detached particles; thus, the net biosecurity benefit remains an **unverified** factor. The trade-off between faster wear (shorter replacement cycle) and slower wear (reduced impact damping) is treated as a **design variable**.
-    * Directional Curved Scaffold Embodiment — The scaffold framework may feature directional curved geometries incorporating sectional and planar curves. Geometric parameters—such as curvature, slope start angle, and slope end angle—are **design variables** determined by local flow velocity and ice load conditions. Flat slope structures represent a special case where curvature equals zero. During impact dissipation, the scaffold maintains its specified curvature geometry until structural limit, while only the outer sacrificial layer depletes.
-        * Concave Zone — Functions as an adhesion pocket that reduces fluid flow to encourage spore settlement and $CaCO_3$ accretion. Bio-adhesion is technically bounded to "induction potential"; regions requiring precise control utilize organism-free ablative cartridges.
-        * Convex Zone — Functions as an energy shedding surface that receives primary physical impacts and deflects horizontal forces laterally.
-    * Curvature Concentration & Localized Wear Acceleration — Excessive curvature may induce localized load concentrations; the resulting relationship between accelerated wear and reduced service life is a **design variable trade-off item**.
-    * Hydrodynamic Drag & Vortex Effects — The impact of scaffold curvature and slope geometry on vessel resistance and vortex generation represents a **separate verification item** requiring tow-tank testing and CFD analysis.
-    * Polar Bio-Adhesion Conditions — The premise that marine organisms can spontaneously colonize and persist under polar ice conditions is treated as an **unverified assumption**.
+### 1.1 Studies treating attached organisms as protective layers (bioprotection)
+A body of research already exists showing that barnacles, mussels and oysters on intertidal rock and concrete structures can reduce or slow weathering and erosion.
 
-* 1. Sacrificial Energy Absorption Model with Ice Failure
-    * Ice/Particle Kinetic Energy Formula:
-      $$E_{ice} = \frac{1}{2} m_{ice} v^2$$
-    * Sacrificial Layer Fracture Absorption Energy Formula:
-      $$E_{sac} = \eta \cdot \sigma_c \cdot A \cdot t$$
-      (Variables — $\sigma_c$: compressive strength of sacrificial layer, $A$: impact area, $t$: effective thickness, $\eta$: fracture efficiency coefficient)
-    * Ice Failure Energy Absorption Term (Newly Incorporated):
-      $$E_{ice\_fail}$$
-      Energy absorbed by bending, shear, and crushing failure inside the ice block during collision. Detailed formulation requires integration of physical ice load equations (Pending primary source verification).
-    * Zero-Downtime Scaffold Survival Condition:
-      $$E_{scaffold} = E_{ice} - E_{sac} - E_{ice\_fail} < E_{yield\_scaffold}$$
-      The residual kinetic energy—after subtracting sacrificial layer fracture energy ($E_{sac}$) and ice failure energy ($E_{ice\_fail}$)—must not exceed the yield energy of the underlying scaffold, preserving skeletal integrity. (Ice load pressure-area relationship integration — **requires primary source verification**)
+* A review reports that sessile calcareous organisms (barnacles, calcareous tube-building worms, mussels, oysters) form a hard, rough layer on the substrate surface and play a protective role (review on biodeterioration and bioprotection of concrete assets in the coastal environment, ScienceDirect Topics summary [Summary]).
+* A field experiment reports that barnacles protect rock at the sub-surface level and that the effect holds from a few centimeters to tens of kilometers (Bioerosive and bioprotective role of barnacles on rocky shores, NW Italy, *Science of the Total Environment* [Summary]). The same research line also contains earlier field results in which barnacle cover showed a moderate, mostly indirect bioerosive or neutral role (Pappalardo et al., 2016), so results are not uniform.
+* Removal of mussels reduced surface hardness by about 10% over five months (Gonzalez et al., 2021, Argentine coast, *Brachidontes rodriguezii* [Summary]). Similar protective effects of blue mussels (*Mytilus edulis*) have been studied (Baxter et al., 2022 [Summary]).
+* Barnacle contributions to thermal buffering (Coombes et al., 2017) and to sealing microcracks (Chlayon et al., 2018) are cited in the above literature [Cited].
+* Barnacles and bacterial films together improve chloride-penetration resistance of concrete (Combined protective action of barnacles and biofilm on concrete surface in intertidal areas, *Construction and Building Materials* [Summary]).
+* Oyster attachment secretions are largely inorganic and resistant to acid dissolution, so they may persist as a protective biogenic layer after the organism dies (Burkett et al., 2010; Tibabuzo Perdomo et al., 2018, as cited [Cited]).
+* Whether fouling causes "deterioration" or "protection" has long been debated, and this debate affects how fouling on structures is managed, as the sources above state [Summary].
+* Oyster breakwater reefs reduced erosion in a field experiment (Kutubdia Island, Bangladesh; erosion reduced by roughly 50% in the lee of the reefs, *Scientific Reports* 2019 [Summary]). Nature-based coastal protection projects such as Belgium's Coastbusters also exist (*Environmental Monitoring and Assessment* 2024, DOI 10.1007/s10661-024-12480-x [Summary]).
 
-* 2. Biogenic Growth Rate Estimation Model
-    * Coverage Growth Differential Equation:
-      $$\frac{dC}{dt} = r(T,S) \cdot C \cdot \left(1 - \frac{C}{K_{max}}\right) \cdot f(R_a)$$
-      (Variables — $C$: Coverage %, $K_{max}$: maximum saturation coverage, $f(R_a)$: scaffold surface roughness function)
-    * Environmental Growth Rate Formula:
-      $$r(T,S) = r_0 \cdot Q_{10}^{\frac{T-T_0}{10}} \cdot \exp\left(-\alpha (S - S_{opt})^2\right)$$
-      ($T$: water temperature, $S$: salinity, $S_{opt}$: optimal salinity. Used to estimate dynamic regeneration cycles across varying sea conditions.)
+Takeaway: Passive surface protection by attached organisms is a well-known topic in coastal ecological engineering. However, most studies concern intertidal rock, concrete and breakwaters. Evidence for moving hulls such as icebreakers under ice-impact conditions was not found in this survey.
 
-* Output Results — Prevents direct damage to primary hull plates, generating maintenance alerts, self-balancing ablation commands, and re-attachment monitoring signals for detached zones.
+### 1.2 Commercial products and patents that induce colonization
+* **ECOncrete**: Founded in 2012 by two marine biologists (Perkol-Finkel and Sella). The manufacturer describes combining a bio-enhancing concrete admixture, rough surface texture and 3D shapes to promote colonization, with "bioprotection" improving durability. Examples include a 24-month monitoring paper on Antifer breakwater units in Haifa (*Ecological Engineering*, "Blue is the new green" [Summary]), Coastalock armor units and bio-active wall tiles [Manufacturer material].
+* **Living Ports (EU Horizon 2020, June 2021 – May 2024)**: ECOncrete coastal armoring and quay wall demonstrated at the Port of Vigo, with DTU monitoring (CORDIS project 970972 [Summary]).
+* **Living Seawall (San Francisco Bay)**: An experiment by the Smithsonian Environmental Research Center (SERC) and the Port of San Francisco comparing standard, bio-enhanced and textured tiles [Summary].
+* **Patent RE42259 "Biologically-dominated artificial reef"**: An artificial reef structure that uses the growth of sessile organisms such as oysters, mussels and barnacles to reduce erosion [Summary].
 
-### C. Self-Regeneration and Maximum Cycle Extension
-* Operational Continuity Scope — Encompasses initial spore settlement following impact through continuous operation and zero-tool quick replacement cartridge cycles. Aims to maximize maintenance intervals rather than asserting infinite lifespan.
+Takeaway: Products combining colonization induction and bioprotection on coastal structures are already at commercial or demonstration stage. These target stationary or fixed structures.
 
-### D. Zero-Downtime Fault Transfer & Self-Balancing Ablation
-* Fault Isolation & Balance Operation — Isolates dynamic control within 100ms upon localized armor failure. On rotating aero-structures, triggers micro self-balancing ablation on the symmetrical cartridge to eliminate eccentric rotational vibrations.
+### 1.3 Sacrificial and ablative layers
+**Ship antifouling paints (self-polishing copolymer, SPC)**
+* Antifouling paints whose polymer hydrolyzes in seawater so that the surface gradually wears away and renews have long been used. Early tin-based (TBT) types were banned under the IMO AFS Convention (adopted 2001; new application prohibited from 2003; prohibited on hulls from 2008), and tin-free silyl-ester acrylic SPCs are now the mainstream (patent US8575231 description, Kiil et al. modeling papers, *Tin-free self-polishing marine antifouling coatings* [Summary]).
+* Polishing rate depends on flow speed, temperature and chemistry, with measurements and models reporting a few µm per month [Summary].
+* Many of these presuppose biocide release, so their purpose differs from the structural sacrificial layers covered here. For ice-going ships, at least one manufacturer states that antifouling and foul-release coatings are unsuitable for ice-contact hulls (Ecospeed manufacturer material [Manufacturer material]).
 
----
+**Replaceable sacrificial leading-edge protection for rotors and propellers**
+* US5542820 "Engineered ceramic components for the leading edge of a helicopter rotor blade" (1996): describes nickel leading-edge caps replaced at depot facilities and elastomeric sacrificial tape as prior practice for sand erosion, and bonds ceramic components to a replaceable tip segment [Full text].
+* US8858184B2 "Rotor blade erosion protection system" (filed 2011): describes metal sacrificial erosion strips that are removed and replaced as they wear, and presents a repairable protection system using a cermet coating [Full text].
+* US9429025B2 / US20130101432A1 / EP2585370A2 "Erosion resistant helicopter blade": layers an impact-resistant layer and an erosion-resistant layer on the leading-edge shield [Full text].
+* US20100008788A1 "Protector for a leading edge of an airfoil": a leading-edge protector with an outer erosion-resistant member and an energy-absorbing member beneath it [Full text].
+* US5782607 "Replaceable ceramic blade insert": places a replaceable ceramic insert in a propeller leading-edge sheath at the outboard end where erosion is highest [Full text].
+* US20050169763A1 "Helicopter rotor and method of repairing same": repair with a polyurethane leading-edge strip [Full text].
+* Related documents seen in citation lists: US7246998B2 "Mission replaceable rotor blade tip section," US5885059A "Composite tip cap assembly for a helicopter main rotor blade," EP3275783B1 "Rotor blade erosion protection systems" [Cited].
 
-## 4. Dynamic Resource Management & Defensive Safety Control
+Takeaway: Replaceable leading-edge protection designed to wear away is a mature, patent-dense area in rotor and propeller engineering.
 
-The control isolation regulations in this section (Rate Limiter, Tri-State Isolation) apply strictly to Section 2.5 AI prediction modules and sensor sub-modules. Passive mechanical sacrificial structures (L2/L1/L0) are exempt from these software control rules; structural fault mitigation for mechanical components strictly follows the segmented independent fastening principles of Section 0.3.
+### 1.4 Icebreaker ice belts: hull form, materials, coatings
+**Hull form and geometry (approaches that make ice fail in bending via curved and sloped surfaces)**
+* US4715305 "Ship's hull" (Wärtsilä; priority 1984, issued 1987): icebreaking hull form [Full text: bibliographic data and citation relations].
+* US5176092 "Icebreaker bow and hull form" (Newport News Shipbuilding, 1993): V-shaped bow and S-shaped stem with a lower wedge [Full text].
+* US4436046 "Ice-breaking hull": sloping ridges on both sides of the bow deflect floes away from beneath the hull [Summary].
+* US5325803 "Icebreaking ship" (German priority DE4101034): a hull with balcony-like side flanks and a parapet [Full text]. *Note: the previous revision grouped this patent as a "hull form inducing bending and shear failure via curved and sloped surfaces." The description confirmed this time centers on the side-flank structure. The basis for that citation must be rechecked against the original.*
+* CA1311393C "Icebreaker": heats outer plating using heat sources in the hull to reduce ice friction and adhesion [Full text].
+* US5660131 "Icebreaker attachment" (Marinette Marine, 1997): an icebreaking attachment that selectively connects to and detaches from a parent vessel. As a hull-scale detachable module it is a relatively close prior example to this document's topic [Full text].
+* *Note: US4351255, cited in the previous revision, could not be verified in this survey. It is not cited until confirmed.*
 
-* Rate Limiter — Damps excessive fatigue load spikes on fastening points during continuous impact events, stabilizing transmitted forces.
-* Tri-State Isolation — Switches sensor and controller outputs to a High-Impedance state within 0.1 seconds (100ms) upon fault detection, preventing error propagation to primary control systems.
+**Ice-belt materials and coatings (commercial technology)**
+* Classification societies (Lloyd's Register, DNV, the Russian Maritime Register and others) require increased ice-belt plate thickness against ice abrasion, and some recognize the benefit of certified abrasion-resistant coatings (Intershield 163 / Inerta 160, AkzoNobel product material [Manufacturer material]).
+* PPG SIGMASHIELD 1200 was applied to four icebreakers, and a diving survey reported no damage on coated vertical sides (BIC Magazine [Manufacturer case]).
+* Ecospeed (Subsea Industries) claims ice-belt plate thickness can be reduced by up to 1 mm [Manufacturer material].
+* The Russian nuclear icebreaker Leader (Project 10510) was reported to use a clad-steel ice belt of roughly 50 mm steel with 5 mm stainless cladding, while the Arktika class (22220) uses an Inerta-type epoxy coating instead of cladding (Nuclear Engineering International [Summary]). An explosion-welded stainless ice belt (the Botnica example) was confirmed only from a secondary source [Secondary source].
+* US10774396 "Seawater-resistant stainless clad steel": addresses abrasion and pitting resistance of stainless clad steel and mentions corrosion resistance in crevices formed by attached barnacles [Full text].
+* US4968538 and US4789567 "Abrasion resistant coating and method of application": abrasion-resistant coatings with ceramic particles dispersed in a corrosion-resistant resin [Summary].
 
----
+**Ice loads and ice resistance models**
+* Lindqvist (1989), "A straightforward method for calculation of ice resistance of ships," *Proc. 10th POAC*, Luleå, vol. 2, pp. 722–735: a model dividing ice resistance into crushing, bending and submersion components. Later modified by Riska et al. (1997) [Summary].
+* Pressure–area relationship: Sanderson (1988) compiled pressure–area data, and Masterson & Frederking (1993) compiled local ice pressures, both showing the area effect in which local ice pressure falls as contact area grows. Later papers cite a relation of the form p = 8.1·a^-0.5 (p in MPa, a in m²) used in design codes (API RP 2N, CSA S471) (*Cold Regions Science and Technology* [Summary]). Palmer & Sanderson (1991) explained the effect with fractals and linear elastic fracture mechanics [Cited]. The definition and application of the area effect remain debated [Summary].
 
-## 5. Standard Utilization & Legal Boundaries
+Takeaway: Curved and sloped hull forms, abrasion-resistant coatings, clad steel and ice-resistance models are all already-public prior areas. No document directly addressing a replaceable or progressively wearing sacrificial module mounted on an ice belt was found in this survey (this does not mean none exists; see Section 5).
 
-* Public Standards References — ISO 8501 surface cleanliness standards, classification Ice Class Rules, IMO AFS, and EU MSFD guidelines serve as reference benchmarks.
-* Regulatory Non-Substitution — This system does not replace or waive mandatory structural stiffeners, statutory anti-fouling coatings, IMO biofouling guidelines (MEPC.207(62)), or port-state biosecurity regulations. Compliance must be verified independently by implementing entities (See Sections 0.7, 0.9, and 0.10).
+### 1.5 Weld-free, clamp-attached marine structures
+* CN104314061A "Detachable ice-resistant device applicable to offshore nuclear power platform": semicircular cylinder halves clamp the pile leg, self-locking joins and releases them, and it allows repeated installation and removal, with a bending-failure cone that reduces ice load [Full text]. This is the closest prior example to "weld-free clamp attachment plus inducing bending failure of ice."
+* EP2275677A2 "Device for reducing ice loads on a pile foundation for an offshore wind turbine": an ice cone built as a permeable strut structure so that wave and wind loads are not increased [Full text].
+* US20110006538A1 / EP2185816A1 / WO2009026933A1 "Monopile foundation for offshore wind turbine": a secondary structure is clamped around the pile, and clamps are described as less prone to damage from impact than bolts [Full text].
+* US5079805 "Fastener for protective sleeves": a fastener for wrapped sleeves that protect pier piles from corrosion, decay and marine-organism attachment [Full text].
+* WO2016095052A9 "Composite sleeve for piles": a composite sleeve reducing adfreeze uplift loads, with a top lock using a bolt, welded collar or clamp [Full text].
 
----
+Takeaway: Clamp-type protective sleeves around piles and legs, and detachable ice cones, have many prior examples. Beyond US5660131 (a hull-scale attachment), no direct example of clamp-type modules on a ship hull shell plate was found in this survey.
 
-## 6. Future Applications & Industrial Expansion
-
-* Intended for expansion to smart harbor breakwaters, offshore wind monopile scour protection, CWP floating structures, and helicopter/aircraft rotor blade leading-edge protective armors.
-
----
-
-## 7. Practical Protection (Quadruple Defense Architecture)
-
-* Quadruple Defense Architecture
-    * Timestamp System — Establishes prior conception timing via immutable cryptographic timestamps.
-    * Standard Dual-Licensing — Applies CC BY 4.0 for text and Apache-2.0 for code/hardware implementations, preventing private monopolization by third parties.
-    * Prior Use Rights — Preserves statutory Prior Use Rights under Article 103 of the Korean Patent Act and 35 U.S.C. §273 (USA) for field trial and prototype manufacturing activities.
-    * Trade Secret Separation — Defends core public concepts via defensive publication while maintaining specific weighting parameters, precise dimensions, and manufacturing tolerances as Trade Secrets.
-
----
-
-## 8. Sources & Declaration of Document Completeness
-
-### 8.1 Soma-moa Ecosystem Repositories
-* Upper Survival Architecture & APU Controller: GitHub - `soma-moa / chiplet-apu-multi-system-survival-architecture`
-* Linked CWP Hardware Repositories:
-  * GitHub - `soma-moa / CWP-Entry`
-  * GitHub - `soma-moa / CWP-Rolling-Self-Align-Battery-Swap-System`
-  * GitHub - `soma-moa / CWP-Battery-Swap`
-  * GitHub - `soma-moa / CWP-Clamping-Battery-Swap-System`
-* Canonical Gateway: `somamoa.ai.kr`
-
-### 8.2 Standards, Prior Art & References
-* International Standards: ISO 8501, IMO AFS Convention, EU MSFD, Classification Ice Class Rules (KR, DNV, ABS).
-* Prior Icebreaking Art & Ice Resistance Models:
-  * Icebreaking hull forms utilizing inclined/curved geometries to induce ice bending and shear failure (US Patents US4351255, US4715305, US5325803 — **requires primary source verification**).
-  * Lindqvist (1989) Ice Resistance Prediction Model — Separates crushing, bending, and submersion components (**requires primary source verification**).
-  * Technical Contribution Bounding — The technical contribution of this publication is strictly limited to reconfiguring public inclined/curved icebreaking geometries into "post-attached sacrificial/regenerative module embodiments on clamping scaffolds" without direct hull welding.
-* Biofouling Management Guidelines & Regulations: IMO Resolution MEPC.207(62); New Zealand MPI Craft Risk Management Standard; California Code of Regulations Title 2, Section 2298.1 et seq. (Requires verification of current statutory texts).
-* Biofilm & Bivalve Microorganism Accumulation Literature: Drake LA et al. (2005) *Biol Invasions* 7:969–982; Drake LA et al. (2007) *Mar Pollut Bull* 55:333–341; Martinez-Albores A et al. (2020) *Foods* 9(2):129; McLeod C et al. (2017) *Compr Rev Food Sci Food Saf* 16(4):692–706; Revilla-Castellanos VJ et al. (2015) "Pathogenic *Vibrio parahaemolyticus* isolated from biofouling on commercial vessels and harbor structures", *Biofouling* 31(3):275–282; Georgiades E et al. (2023) *Front Mar Sci* 10:1197366; Scianni C et al. (2023) *Front Mar Sci* 10:1239723. (Based on abstracts; pending primary text confirmation).
-* Anti-Fouling Environmental Impact Literature: IMO AFS Convention (2001/2008); EMSA Anti-fouling guidance; Thomas KV & Brooks S (2010) *Biofouling* 26(1):73–88; Konstantinou IK & Albanis TA (2004) *Environ Int* 30:235–248; Alzieu C (2000) *Sci Total Environ* 258:99–102. (Based on abstracts; pending primary text confirmation).
-* Paint Particle Environmental Impact Literature (Analogous grounds): Soroldoni S et al. (2018) "Antifouling paint particles: Sources, occurrence, composition and dynamics" (journal, volume, pages, DOI require verification); *Mar Pollut Bull* (2021) 169:112529; PMID 34401707 (2021). (Addresses biocidal paint particles; direct relevance to non-biocidal ablative materials pending verification; based on abstracts).
-* In-Water Cleaning Release Literature: Tamburri MN et al. (2021) *Front Mar Sci* 8:804766; Woods CMC et al. (2012) *Mar Pollut Bull* 64:1392–1401; Floerl O et al. (2005) MPI Technical Paper No. 08/12. (Based on abstracts; pending primary text confirmation).
-* Public Engineering Principles: Béla Barényi (1951), Automotive Passive Safety Architecture (Crumple Zone & Airbag).
-* Statutory Grounds: Article 103 of the Korean Patent Act; 35 U.S.C. §273 (USA).
-* Document Completeness: This document possesses self-contained technical completeness.
-* Primary Governing Language: The Korean text is the primary governing original authority; in the event of any interpretive conflict in translations, the Korean text prevails.
-
-### 8.3 Copyright & License Notice
-Textual expressions in this document are published under Creative Commons Attribution 4.0 International (CC BY 4.0). Derivative code and hardware implementations are dual-licensed under Apache License 2.0 (Apache-2.0). The conceiver (deundeuni / soma-moa) asserts no exclusive patent rights over the conceptual ideas disclosed herein. Detailed terms follow the LICENSE file in the repository.
+### 1.6 General background for structural sacrifice
+* Béla Barényi (1951), automotive passive safety (crumple-zone) concept. Cited as the classic background for dissipating impact energy through structural deformation.
 
 ---
 
-## Appendix A: Inventorship
-* Primary Inventor / System Architect: deundeuni (soma-moa / github.com/soma-moa)
+## 2. Environmental and Biosecurity Issues When Using Attached Organisms (Summary of Prior Literature)
 
-## Appendix B: Version History
-* Full history maintained in HISTORY.md (Korean & English side-by-side). See HISTORY.md.
+Using attached organisms as protective layers collides directly with invasive-species transfer on ships. The following retains and condenses literature organized in earlier revisions. It records known limits and is not an assertion.
 
-## Appendix C: AI Assistance Disclosure
-* Technical & Legal Drafting Support: Generic Generative AI Text Refinement & Structuring Tools
+* **International guidelines**: In 2011 the IMO adopted Resolution MEPC.207(62), guidelines for the control and management of ships' biofouling, which describes hull biofouling as an important pathway for transfer of invasive aquatic species.
+* **Port-state rules**: New Zealand's Ministry for Primary Industries (MPI) Craft Risk Management Standard is known to have required, since 2018, that hulls of arriving vessels be free of fouling (mostly allowing only a slime layer), and California has biofouling management regulations (California Code of Regulations, title 2, section 2298.1 et seq.). Detailed requirements may be revised and must be checked before any real application.
+* **Microbial transfer**: Hull fouling includes biofilms, and literature exists showing that bivalves can accumulate bacteria and viruses through filter feeding. Pathogenic *Vibrio parahaemolyticus* has been reported in biofouling on the outer hulls of commercial vessels (Revilla-Castellanos et al., 2015). No study directly examining viruses in the outer-hull fouling layer was found; most virus literature concerns ballast-tank interiors or shellfish in contaminated coastal and aquaculture settings. Presence and pathogenicity are separate matters.
+* **Colony-scale detachment**: No confirmed literature was found on whether fragments of fouling communities released en masse by impact can survive and settle in other waters.
+* **In-water cleaning**: Policy briefs and NIWA research (Woods et al., 2012) indicate that in-water cleaning can increase the release of living organisms and microbes.
+* **Impact by approach**: Biocidal antifouling paints can chemically affect non-target organisms, colonization-based approaches can mediate transfer of invasive species and microbes, and non-biological ablative approaches also require environmental assessment of the shed material. No approach is declared better than another here.
+* **Regulatory compliance**: Conventions, guidelines, national rules and classification rules applying to the entire route (transit and port-call waters, including special polar areas) must be checked, and it is reasonable to consider the stricter requirement first (Article 1(3) of the AFS Convention does not prevent states from taking stricter measures consistent with international law).
 
-## Appendix D: Citation Format (CITATION.cff)
+---
+
+## 3. Verification Status and Differences from the Earlier Revision
+
+| Item | Result of this survey |
+|---|---|
+| US4715305 | Bibliographic data and citation relations confirmed. Wärtsilä "Ship's hull" |
+| US5325803 | "Icebreaking ship" (balcony-like side flanks). Its purpose may differ from the earlier "bending/shear-inducing hull form" description; recheck needed |
+| US4351255 | Could not be verified. Citation withheld |
+| Lindqvist (1989) | Bibliography confirmed (POAC 1989, pp. 722–735). Equations not read in the original |
+| Pressure–area relation | Form confirmed only at the level of citing papers. Original not read |
+| Energy-absorption equation for ice failure reflecting the pressure–area relation | The in-house equation was deleted from this revision. If needed, it should be cited directly from the literature above |
+
+---
+
+## 4. Interpretive Notes (Compiler's Observations, Not Claims)
+
+* Each individual element (bioprotection, replaceable sacrificial protection, curved hull forms, abrasion-resistant coatings, clamp attachment) has its own separate prior area.
+* No document was found in this survey scope that directly combines them as "a progressively wearing, replaceable module on an ice belt plus an optional bio-colonization layer." This means "not found this time," not "new."
+* No document was found that directly matches symmetric ablation of rotating machinery or tool-free quick-release cartridges. However, replaceable leading-edge protection for rotor blades (Section 1.3) is already abundant.
+* Colonization-based approaches have rich prior research on stationary and fixed structures, but on ships that sail across multiple sea areas they may conflict with the regulations in Section 2. This is a fact the literature shows.
+
+---
+
+## 5. Survey Limitations and Items Not Yet Surveyed
+
+* This survey was a single round of mainly English-language searching. An extended round including small-company and individual filings and Korean, Chinese, Russian and Japanese literature was not carried out. Further verification using synonyms and industry terminology will follow.
+* Items not searched this time: mineral accretion (Biorock family), historical sacrificial sheathing on wooden ships, synthetic calcium carbonate analogues, hardness-gradient sacrificial layers and pre-segmented cell structures, colonization pockets on curved scaffolds, literature on mitigating rotor unbalance, and sensor monitoring of marine structures.
+* Many items were checked only at the level of summaries, abstracts or manufacturer material. Not all originals were read.
+* Structural impact analysis, tank tests, and clamp fatigue and freezing tests have not been performed, and there is no plan to perform them.
+* Performance figures in manufacturer materials are the manufacturers' own claims.
+
+---
+
+## 6. References and Sources
+
+### 6.1 Standards, conventions, guidelines
+ISO 8501; IMO AFS Convention (adopted 2001, in force 2008, Article 1(3)); EU Marine Strategy Framework Directive (MSFD); classification-society Ice Class rules (KR, DNV, ABS, Lloyd's Register); IMO Resolution MEPC.207(62) (2011); New Zealand MPI Craft Risk Management Standard; California Code of Regulations, title 2, section 2298.1 et seq.; API RP 2N; CSA S471.
+
+### 6.2 Patents (bibliographic data checked this time)
+US4715305; US5325803; US5176092; US4436046; CA1311393C; US5660131; US5542820; US8858184B2; US9429025B2; US20130101432A1; EP2585370A2; US20100008788A1; US5782607; US20050169763A1; US7246998B2 [Cited]; US5885059A [Cited]; EP3275783B1 [Cited]; US10774396; US4968538; US4789567; US8575231; US5472993; US4914141; CN104314061A; EP2275677A2; US20110006538A1; EP2185816A1; WO2009026933A1; US5079805; WO2016095052A9; RE42259.
+
+### 6.3 Papers and reviews
+* Lindqvist G (1989) A straightforward method for calculation of ice resistance of ships. *Proc. 10th POAC*, Luleå, 722–735.
+* Sanderson TJO (1988) *Ice Mechanics: Risks to Offshore Structures*; Masterson DM, Frederking RMW (1993) Local contact pressures in ship/ice and structure/ice interactions. *Cold Regions Science and Technology*; Palmer AC, Sanderson TJO (1991).
+* Bioerosive and bioprotective role of barnacles on rocky shores. *Science of the Total Environment*.
+* Combined protective action of barnacles and biofilm on concrete surface in intertidal areas. *Construction and Building Materials*.
+* The bioprotective properties of the blue mussel (*Mytilus edulis*) on intertidal rocky shore platforms.
+* Oyster breakwater reefs promote adjacent mudflat stability and salt marsh growth in a monsoon dominated subtropical coast. *Scientific Reports* (2019).
+* Nature-based solutions for coastal protection in sheltered and exposed coastal waters. *Environmental Monitoring and Assessment* (2024), DOI 10.1007/s10661-024-12480-x.
+* Perkol-Finkel S, Sella I, "Blue is the new green: Ecological enhancement of concrete based coastal and marine infrastructure." *Ecological Engineering*.
+* Kiil S et al., dynamic simulations of a self-polishing antifouling paint (*JCT Coatings Tech*); Tin-free self-polishing marine antifouling coatings (review).
+
+### 6.4 Biofouling and biosecurity (retained from earlier revisions; abstract-level; originals need checking)
+Drake LA et al. (2005) *Biological Invasions* 7:969-982; Drake LA, Doblin MA, Dobbs FC (2007) *Marine Pollution Bulletin* 55:333-341, DOI 10.1016/j.marpolbul.2006.11.007; Martinez-Albores A et al. (2020) *Foods* 9(2):129; McLeod C et al. (2017) *Comprehensive Reviews in Food Science and Food Safety* 16(4):692-706; Revilla-Castellanos VJ et al. (2015) *Biofouling* 31(3):275-282, DOI 10.1080/08927014.2015.1038526; Georgiades E, Scianni C, Tamburri MN (2023) *Frontiers in Marine Science* 10:1197366; Scianni C et al. (2023) *Frontiers in Marine Science* 10:1239723; Tamburri MN et al. (2021) *Frontiers in Marine Science* 8:804766, DOI 10.3389/fmars.2021.804766; Woods CMC, Floerl O, Jones L (2012) *Marine Pollution Bulletin* 64:1392-1401, DOI 10.1016/j.marpolbul.2012.04.019; Floerl O et al. (2005) MPI Technical Paper No. 08/12.
+Environmental effects of antifouling paints: Thomas KV, Brooks S (2010) *Biofouling* 26(1):73-88, DOI 10.1080/08927010903216564; Konstantinou IK, Albanis TA (2004) *Environment International* 30:235-248, DOI 10.1016/S0160-4120(03)00176-4; Alzieu C (2000) *Science of the Total Environment* 258:99-102; Soroldoni S et al. (2018) on antifouling paint particles (bibliography needs checking); *Marine Pollution Bulletin* 169:112529 (2021, authors need checking).
+
+### 6.5 Commercial products and manufacturer material (manufacturers' own claims)
+AkzoNobel International Intershield 163 Inerta 160; PPG SIGMASHIELD 1200; Subsea Industries Ecospeed; ECOncrete case-study material; CORDIS Living Ports (project 970972); Port of San Francisco / SERC Living Seawall.
+
+### 6.6 Prior art invoked
+Béla Barényi (1951), automotive passive safety concept (crumple zone).
+
+---
+
+## 7. Attribution, License and How This Was Written
+
+* Credit for all technical content in this document belongs to the authors, inventors, institutions and manufacturers of the sources above. The compiler only collected and organized the material.
+* The text is released under CC BY 4.0. Anyone quoting or reusing it is encouraged to credit both this repository and the original sources.
+* General-purpose generative AI tools were used for text organization and bibliographic searching, and the compiler organized the document reflecting review comments. Responsibility for errors and omissions rests with the compiler.
+* If you find errors in the bibliography, patent numbers or figures in this document, please let us know. They will be corrected as they are confirmed.
+
+### CITATION.cff
 ```yaml
 cff-version: 1.2.0
-message: "If you use or reference this defensive publication framework, please cite it as below."
+message: "If you use or reference this literature review, please cite it as below."
 authors:
-  - family-names: "deundeuni"
-    given-names: "soma-moa"
-title: "Max-Life-Ice-Belt: Sacrificial Self-Regenerating Armor System with Clamping Scaffold for Icebreakers, Marine Structures, and Aero-Rotors"
-version: "1.97"
-date-released: 2026-10-01
-url: "[https://github.com/soma-moa/Max-Life-Ice-Belt](https://github.com/soma-moa/Max-Life-Ice-Belt)"
+  - alias: "deundeuni"
+    name: "soma-moa"
+title: "Max-Life-Ice-Belt: A Literature Review on Sacrificial Surface Layers for Marine, Polar and Rotating-Machinery Applications"
+date-released: 2026-10-04
+license: CC-BY-4.0
+url: "https://github.com/soma-moa/Max-Life-Ice-Belt"
 keywords:
-  - "Defensive Publication"
+  - "Literature Review"
   - "Prior Art"
-  - "Icebreaker Armor"
-  - "Bio-fouling Armor"
-  - "Zero-Downtime"
-  - "Ablative Cartridge"
-  - "Self-balancing Ablation"
-  - "Zero-tool Quick Replacement"
-  - "CaCO3 Eco-Armor"
-  - "Mussel Eco-Armor"
-  - "Oyster Eco-Armor"
-  - "Spontaneous Bio-Adhesion"
+  - "Ice Belt"
+  - "Bioprotection"
+  - "Sacrificial Layer"
+  - "Rotor Leading Edge Erosion"
+  - "Clamp-on Marine Structures"
+```
