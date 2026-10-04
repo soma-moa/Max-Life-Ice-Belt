@@ -1,254 +1,221 @@
-# Max-Life-Ice-Belt — 상시 해수 접촉 구조물, 쇄빙선 갑판 스플래시·선수·선미, 클램핑 스캐폴드, 의도적·자생적 따개비·홍합·굴 희생장갑 및 항공 회전체 어블레이티브 시스템 기술 명세서 (v1.97 Prior-Art Refined Baseline)
+# Max-Life-Ice-Belt — 해양·극지·회전체 표면 희생층 관련 선행 문헌 정리
 
-* 공식 문서 분류: 방어적 선행기술 공개 백서 (Defensive Publication / Prior Art)
-* 최초 구상일: 2026-09-02 / 최종 개정일 (v1.97): 2026-10-01
-* 원천 지적재산권(IP) 보유자: 소마모아 (soma-moa / 구상자: deundeuni)
-* 공식 저장소: github.com/soma-moa/Max-Life-Ice-Belt | 공식 도메인: somamoa.ai.kr
-* 적용 라이선스: Creative Commons Attribution 4.0 International (CC BY 4.0) & Apache License 2.0 (Apache-2.0) 이원화 체계 적용 (기존 DPL v1.0은 2026년 9월 27일 자로 본 표준 라이선스 체계로 전면 대체됨)
-* 원안 언어 고지: 본 문서의 한국어 원문이 법적·기술적 기준 원본이며, 영문 번역본은 참고용이다. 해석상 충돌 발생 시 한국어 원문의 서술과 정의가 최우선한다.
-
----
-
-## 0. 창안자 선언 및 동기
-
-### 0.1 현장에서 출발한 직관적 동기 (Field-Driven Motivation)
-본 구조 설계는 "갑판부 바깥쪽 바닷물 닿는 구간, 쇄빙선의 선수와 선미는 항상 깨지고 닳는데, 매번 페인트칠과 철판 교체로 막을 수 없다"는 현장 문제의식에서 출발하였다.
-기존 해양 방오 기술은 따개비, 홍합, 굴 등 부착 생물을 전면 제거 및 방지의 대상으로만 국한하여 접근하였다. 본 발명은 이러한 관점을 역발상하여, 의도적 인공 유도뿐만 아니라 자연적 착생 방치, 생물학적 유도물질 미도포 상태에서의 자생적 부착 및 합성 $CaCO_3$ 모사체를 포괄하여, 부착 생물 및 석회질 형성물을 충격 시 일차적으로 파쇄되며 에너지 및 마찰력을 흡수하는 "희생층(Sacrificial Layer)"으로 전환 정의한다. 이에 따라 물리적 충격으로 희생층이 깨져 나간 후에도 내부의 기계적 뼈대는 보존되고 표면 생물층이 지속적으로 자가 재생되는 '생존 장갑' 메커니즘을 창안하였다. 기존 CWP 배터리 스왑 모듈에 적용된 롤링 및 클램핑 탈착 구조를 하부 골격으로 채용함으로써, 모선 및 구조물 표면에 대한 직접 용접 작업 없이 고정력을 확보하는 생존형 방어 구조를 정립한다.
-
-### 0.2 기본 개념 및 재료 융합 확장성 선언 (Master Concept & Material Fusion Standard)
-본 명세서에 개시된 클램핑 스캐폴드 기반의 0점(Zero-Point) 기준 고정 방식 및 희생층 자가재생 메커니즘은 전체 보호 시스템의 최상위 기본 기준점(Master Reference Framework)으로 기능한다.
-본 설계는 공지기술인 자동차 패시브 세이프티(Passive Safety) 철학(Béla Barényi, 1951)의 구조적 희생 개념을 해양 및 항공 환경으로 확장 원용한다. 요철 스캐폴드의 물리적 재질(강재, 알루미늄 합금, FR-복합재, 고내식성 합금 등), 따개비·홍합·굴 등 해양 부착 생물 유도 및 착생 방식(표면 물리적 조도 제어, 미세 미소전류 인가, 생물학적 유도물질 도포, 자연적 착생 방치, 합성 $CaCO_3$ 모사체 도포 등), 부착층 두께 범위, 클램핑 메커니즘(볼트 체결, 롤링 락, 영구자석/전자기 결합, 음압 흡착 방식 등) 및 AI 기반 부착·탈락 예측 모델이 단독 또는 복합 추가되는 모든 확장 실현 형태는 본 기본 개념의 부가적 응용 조합이며, 본 선행기술의 포괄적 보호 범주에 포함될 수 있다.
-
-* 상위 아키텍처 및 APU 제어기 연계 명시 — 본 Max-Life-Ice-Belt의 스캐폴드 0점 고정 및 100ms 국소 격리 제어는 `ARCHITECTURE_STRATEGY v3.2.4`의 범용 생존 아키텍처 및 `chiplet-apu-multi-system-survival-architecture v2.6`의 Tri-State Isolation, T-Reg 억제 논리를 해양 물리 환경에 구현한 하위 구현체이다.
-
-### 0.3 유기적 무중단 구조 및 무용접 원칙 (Zero-Downtime & Non-Welding)
-본 구조체는 기존 선체 외판 및 해양 구조물 본체에 대한 전기적·물리적 손상(고열 용접, 관통 천공 등)을 수반하는 개조 작업을 엄격히 방지하는 것을 원칙으로 한다. 특정 국소 영역의 희생층이 고출력 유빙 충격 및 마찰로 인해 완파·탈락하더라도 전체 방어 시스템의 연속적 보호 기능이 정지되지 않는 유기체적 무중단 생존력(Zero-Downtime)을 지향한다. 하부 스캐폴드는 분할된 독립 다중 고정 구조를 유지하여 단일 장애점(SPOF, Single Point of Failure) 발생을 완화하며, 외부 희생층이 파열된 후에도 기계적 스캐폴드 골격은 원형을 유지하여 차세대 생물체의 재부착을 지속적으로 유도한다.
-스캐폴드 상태 모니터링을 위한 센서 장착 시, 모선 외판에 대한 용접·관통 천공을 배제하는 방식(예: 클램핑 구조체 내부 배선 채널, 비관통형 에지 고정 등)을 적용하는 것을 원칙으로 한다.
-
-### 0.4 비배타적 상호운용성 및 공용 오픈 표준
-본 기술 명세는 특정 조선소, 선급 협회, 특수 도료 제조사, 해양 구조물 형상에 독점적으로 귀속되지 않는다. ISO 8501 등 공공 영역의 표면 처리 및 부식 관리 표준, 각국 선급 규정의 아이스벨트(Ice-belt) 구조 기준, 해양 생물 부착 유도 기법에 관한 공공 연구 표준을 보조적 기준점으로 원용할 수 있는 범용 오픈 표준(Universal Open Standard)으로 작동한다.
-
-### 0.5 현장 기반 우선순위 제어 원칙
-극한 환경에서 한계치를 초과하는 충격 과부하가 발생할 경우, 시스템은 하부 스캐폴드 골격 구조의 물리적 잔존 및 모선 밀착 유지를 최우선순위로 설정하여 제어한다. 희생층 표면의 완벽한 형상 유지 등 후순위 보호 목표는 단계적으로 포기 및 억제함으로써 모선 외판에 대한 직접적 충격 전달을 방지하고 보호 기능의 제어 연속성을 확보한다. 본 시스템은 영구불멸의 절대적 보호를 보장하지 않으며, 구조물의 유지보수 및 교체 주기를 물리적으로 최대한 연장하는 것을 현실적 목표로 설정한다.
-
-### 0.6 포괄적 적용 범위 및 항공/회전체 확장성 (Universal Application Scope)
-본 설계 메커니즘은 극지 항해용 쇄빙선, 일반 상선 충돌부, 불워크 외현 스플래시 벨트, 방파제 전면부, 해상풍력 하부 기초 구조물(하부 승강장 포함), 부유식 해양 플랜트(FLNG/FPSO), CWP 계류체 등 동적 해수 접촉, 유빙 충돌, 말단 비산염분이 발생하는 모든 해양 구조물의 외각 보호층에 포괄적으로 적용 가능하다.
-더불어 본 메커니즘의 항공 및 회전체 적용 시, 국소 탈락에 따른 회전 불균형(Dynamic Unbalance)을 완화하기 위한 대칭 자율 박리(Self-balancing Ablation) 및 원터치 클램핑 슬롯 기반의 무공구 퀵 릴리즈 카트리지(Zero-Tool Quick Replacement Cartridge) 교체 구조를 선택적으로 결합할 수 있다.
-
-### 0.7 공개 목적 및 법적 지위 고지
-본 문서는 사적 독점권 설정을 방지하고 기술의 공공성을 확립하기 위한 방어적 선행기술 공개(Defensive Publication) 자료이다. 명세서 내 수치, 기능, 물리적 구성, 예상 성능 서술은 기술 사상을 설명하기 위한 예시적 서술이며 특정 구현 형태를 한정하거나 절대적 성능을 보장하지 않는다. 본 시스템은 법정 선급 검사 기준, 해양환경오염방지협약(MARPOL), IMO의 협약·지침 및 각국의 규정을 대체·변경·면제하지 않으며 보조적·참고적 보호 구조체로서만 활용된다. 환경·생물안전 관련 한계와 규제 준수 권고는 0.9절에 통합하여 고지한다.
-
-### 0.8 독립적 선행 구상 인정 및 겸양 고지 (v1.4 삼중 방어 조항 유지)
-본 시스템 설계는 창안자가 현장 문제의식에서 출발하여 기존 공개된 원리 및 공지기술($CaCO_3$ 생물광물화, 희생 양극, 자동차 크럼플존 등)이 이미 존재하는지 여부를 확인·검토한 후, 창안자 개인의 관점에서 "나는 이렇게 생각했다"는 방식으로 조합·재구성한 것이다.
-"본인이 혼자 최초로 독자 구상했다"고 주장하지 않으며, 동일하거나 유사한 기술적 모티프가 타 연구자 또는 산업 현장에서 독립적으로 구상되었을 가능성을 충분히 인정한다.
-본 공개의 목적은 특정 주체의 배타적 특허 독점권 확보가 아니며, 기술 내역을 공공의 선행기술(Prior Art)로 등록하여 타 주체의 사적 독점 출원 시 신규성·진보성 부정의 거절 근거를 제공하는 데 있다. 한국어 원문이 기준 원본(Original Authority)이며, 타 언어 번역본에서 의미상 충돌이나 해석 차이 발생 시 한국어 원문의 서술과 정의를 최우선 기준으로 적용한다.
-
-### 0.9 환경·생물안전 및 규제 준수 고지 (Environmental, Biosecurity & Compliance Notice)
-**환경 친화성의 범위.** 본 희생층은 따개비, 홍합, 굴 기원의 생물 무기질 및 합성 $CaCO_3$ 모사체를 포함하는 탄산칼슘 성분을 주요 성분으로 하며, 탈락 시 해양에서 자연 분해되는 천연 탄산칼슘 입자로서 합성수지계 미세플라스틱(Microplastic) 유출을 완화하는 방향을 지향한다. 이 서술은 미세플라스틱 완화 측면에 한정되며 외래종 이동 위험의 완화를 의미하지 않는다. 본 구성은 살생물질의 방출을 전제로 하지 않는다는 점에서 IMO AFS 협약이 규제하는 유해 방오 시스템과 성격이 다르다. 이는 환경적 우열을 뜻하지 않는다.
-
-**생물 이동 매개 가능성 및 탈락 확산의 상호작용.** 본 명세서가 제안하는 희생층은 따개비·홍합·굴 등 부착 생물을 의도적으로 유도하거나 자연 착생 상태로 두는 구성을 포함한다. 그런데 선체에 부착생물이 쌓이는 현상은, 국제해사기구(IMO)가 2011년 결의 MEPC.207(62)로 채택한 「선박 부착생물의 통제 및 관리에 관한 지침(2011 Guidelines for the control and management of ships' biofouling to minimize the transfer of invasive aquatic species)」에서 외래 수생생물 이동의 중요한 수단으로 서술되어 있으며, 이 결의는 회원국에 지침의 이행을 요청하고 있다. 또한 일부 국가와 지역은 입항 선박에 부착생물 관리를 요구하는 자체 규정을 두고 있다. 예를 들어 뉴질랜드 1차산업부(MPI)의 Craft Risk Management Standard는 2018년부터 입항 선박에 부착생물이 없는 선체(대부분의 선박에서 점액층 정도만 허용)를 요구하는 것으로 알려져 있고(이후 개정·통합됨), 미국 캘리포니아주도 IMO 지침에 맞춘 선체 부착생물 관리 규정(California Code of Regulations, title 2, section 2298.1 et seq.)을 두고 있다. 각 규정의 현재 세부 요건은 개정될 수 있으므로 실제 적용 전에 확인이 필요하다. 본 명세서의 생물 착생형 구성은 국제 지침과 기항국 규정의 취지와 충돌할 수 있으며, 특정 항로나 기항지에서는 적용이 제한될 수 있다.
-
-유빙 및 외력 충격에 의해 희생층이 파쇄·탈락하는 과정에서 개별 유생뿐만 아니라 생물 군집 단위의 조각이 대량 방출될 가능성을 배제하지 않는다. 해당 군집 조각이 타 해역으로 이동하여 생존 및 착생을 유지할 수 있는지 여부는 **미검증** 상태이며, 탈락 물리 현상과 외래종 확산 간의 정량적 상관관계는 추가 검증이 필요하다.
-
-선체 부착생물층에는 따개비 등 대형 생물뿐 아니라 세균·미세조류·원생생물로 이루어진 생물막이 함께 형성되며, 홍합·굴 같은 이매패는 여과 섭식으로 세균과 바이러스를 축적할 수 있다는 문헌이 있다. 다만 세균에 관해서는 상선 외부 선체의 부착생물에서 병원성 *Vibrio parahaemolyticus*가 검출되었다는 보고가 있으나, 바이러스에 관해서는 외부 선체의 생물 착생층을 직접 조사한 연구를 확인하지 못했으며, 바이러스 관련 문헌들은 주로 밸러스트 탱크 내부 생물막과 오염된 연안·양식 환경의 조개류를 대상으로 한다. 바이러스가 존재한다는 것과 사람이나 동물에게 병을 일으킨다는 것은 별개이다. 미생물과 바이러스가 부착생물과 함께 운반될 가능성을 본 명세서는 배제하지 않는다.
-
-**방식별 환경 영향.** 생물살멸형 방오도료 기반 방식은 비표적 생물에 대한 화학적 영향을 수반할 수 있고, 생물 착생 희생층 방식은 외래종 및 미생물·바이러스의 이동 매개 가능성을 수반할 수 있으며, 생물이 없는 어블레이티브 카트리지 방식도 탈락 물질(재질에 따라 달라짐)의 해양 환경 영향을 별도로 평가해야 한다. 고정식 구조물의 경우에도 탈락 물질의 인근 해역 방출 및 축적에 대한 환경 영향 평가가 별도로 요구된다. 어느 방식을 선택하더라도 자연생태계 보존 관점에서의 영향 가능성을 배제할 수 없으며, 운용 주체에 의한 지속적인 관리와 통제가 필요하다. 본 명세서는 이들 방식의 환경적 우열을 단정하지 않는다.
-
-**운용 환경별 실시 형태 분리 적용 권고.** 착생 생물을 해당 해역의 토착종으로 한정하려는 방안은, 자연 해수 상태에서 부유 유생(Planktonic Larvae)의 인위적 제어가 불가능하므로 실효성이 낮을 수 있음을 인정한다. 이에 따라 본 기술 명세의 실시 형태는 대상 구조물의 운용 특성에 따라 다음과 같이 분리하여 검토하는 것을 권고한다.
-* 고정식 해양 구조물 (방파제, 해상풍력 기초 하부 등) — 동일 해역 내 지속 위치 구조물로서, 자생적 착생 및 생물 유도형 희생층 실시 형태 적용을 우선 검토한다. 단, 탈락 물질의 인근 해역 방출 영향은 별도 평가 대상이다.
-* 다해역 항해 선박 (쇄빙 상선, 국제 운항 선박 등) — 기항국 생물안전 규제 및 외래종 이주 위험을 완화하기 위해 생물이 없는 정밀 비생물 어블레이티브 카트리지(Ablative Cartridge) 희생층 실시 형태를 우선 검토한다. 이 경우 역시 카트리지 탈락 입자의 해양 환경 영향 평가가 수반되어야 한다.
-
-**규제 준수 권고.** 구현·운용 주체는 항해하는 항로(경유·기항 해역 전체)에 적용되는 규제를 모두 확인할 것을 권고한다. 확인 대상은 IMO 등 국제기구가 채택한 협약·지침(AFS 협약 등)과 논의 동향, 지역·환경 규제 기구(EU 해양전략 프레임워크 지침 등)의 정책과 협의 내용, 운항·기항 해역의 연안국·기항국 규정과 국가 표준, 극지 등 특별 해역의 별도 환경 체계, 선급 규칙, 표준규격(ISO 등)이다. 채택 전 논의는 구속력이 없어 동향 참고에 그치고, 채택·시행된 규정을 따른다. 규정 간 우열은 본 명세서가 정하지 않으나, AFS 협약 제1조(3)에 명시된 바와 같이 국제법에 부합하는 범위에서 국가가 더 엄격한 조치를 취하는 것을 협약이 막지 않으므로 항로 전체를 기준으로 더 엄격한 요건을 우선 검토한다. 본 명세서의 권고는 구속력 있는 법령·조약·기항국 규정에 우선하지 않으며, 그러한 규제가 있으면 그 규제를 따른다.
-
-**구현·운용 주체의 검토 사항.** 수중 세척 자체가 살아있는 생물과 미생물의 방출을 늘릴 수 있다는 정책 브리프 서술이 있으므로 세척 및 제거 방법 선택에 유의해야 한다. 해역 이동 시 제거·불활성화 절차와 기록 관리, 또는 생물이 없는 정밀 어블레이티브 카트리지 희생층을 사용하는 방안 등을 검토하여야 한다. 위 방안의 효과와 규정 적합성은 본 명세서에서 검증되지 않았다. 본 조항은 기술 사상의 개시 범위를 바꾸지 않고, 알려진 한계와 위험을 함께 고지하기 위한 것이다.
-
-### 0.10 설계자 한계 및 기술 검증 범위 고지 (Designer Limitations Notice)
-본 기술 명세서에 개시된 구조 사상 및 수학적 모델은 다음과 같은 명확한 개발 한계를 지닌다.
-* 선행기술 조사 범위 한계 — 본 구상은 철저한 체계적 선행기술 조사 이전에 창안자의 문제의식에서 출발한 것으로, 공지기술과의 경계 설정에 한계가 존재할 수 있다. 특히 후부착 모듈, 점진 마모 구배, 및 무용접 클램핑 스캐폴드 메커니즘과 관련된 세부 선행기술 조사는 수행되지 않았다.
-* 물리·에너지 모델의 단순화 — 제3장에 제시된 충격 에너지 감쇄 및 비산 모델은 거시적 보존 법칙에 기반한 1차 단순화 모델이며, 빙하중의 압력-면적 관계(Pressure-Area Relationship) 및 미세 균열 진전 메커니즘을 완전하게 반영하지 못했다. (압력-면적 관계식 및 빙하중 특성 연동 — **원문 및 구체 수식 확인 필요**)
-* 생물 착생 및 극지 환경 미검증 — 생물 유도 물질의 정밀 제어 여부 및 극지·유빙 구간에서의 생물 자생적 착생 가능성은 입증되지 않은 **미검증 가정**이다.
-* 기계적 클램핑 및 시뮬레이션 미수행 — 초저온 동결 조건에서의 클램프 접촉면 피로 하중, 얼음 팽창 압력에 따른 고정력 변화 시험 및 `LS-DYNA` 등 구조 충돌 해석(Explicit Dynamics)을 직접 수행하지 않았다.
-* 창안자 경험 범위 고지 — 창안자의 직접 관찰·실무 경험은 금속 판재 가공 및 설비 시공 분야에 한정된다. 해양·극지 관련 서술은 공개 문헌과 공지기술에 기반한 추론이며, 해당 분야 전문가의 검증을 받지 않았다.
+* 문서 성격: 선행 문헌 정리 문서 (신규 발명·청구 문서가 아님)
+* 개정일: 2026-10-04 (현재 개정판은 버전 번호를 쓰지 않고 개정일만 표기한다)
+* 작성자: 자료 정리자 deundeuni (soma-moa)
+* 저장소: github.com/soma-moa/Max-Life-Ice-Belt | 도메인: somamoa.ai.kr
+* 라이선스: Creative Commons Attribution 4.0 International (CC BY 4.0) 단일
+* 언어: 한국어 원문이 기준본이며 영문본은 참고용이다. 해석이 충돌하면 한국어 원문을 따른다.
 
 ---
 
-## 1. 버전 변경 이력
+## 0. 정정·철회 고지 및 문서 성격
 
-* 현재 버전: v1.97 (2026-10-01)
-* 최근 변경 (v1.97):
-  - 0.3절 및 4장 정제: 센서 장착 시 비관통·무용접 원칙 명시, 4장 제어 격리 규정의 적용 범위를 2.5 AI·센서 서브모듈로 한정(수동 기계 구조체의 결함 완화는 0.3절 원칙 준용).
-  - 0.9절 개편: 생물 착생형은 고정식 구조물 실시에 우선 적용하고, 다해역 선박에는 비생물 카트리지형을 우선 검토하도록 전환(근거: 부유 유생 제어 불가로 토착종 한정 방안의 실효성이 낮고, 기항국 생물안전 규제 및 탈락 군집 방출의 확산 위험(미검증)이 있음. 타이틀과의 방향 차이는 의도적 선택임). 방식별 탈락물 환경 영향 평가 단서 추가. 바이러스 관련 단서, 수중 세척 주의, AFS 제1조(3) 서술은 유지.
-  - 0.10절 신설: 설계자 한계 고지(선행기술 조사 범위 한계 및 후부착/점진마모/클램핑 선행기술 미조사 명시, 물리 모델 단순화, 생물 착생·극지 착생 미검증, 클램프 피로·동결 미시험, LS-DYNA 구조 충돌 해석 미수행, 금속 판재 가공 및 설비 시공 분야 한정 경험 문구 명시).
-  - 3장 B절 보강: 점진 마모형(층별 경도 구배) 및 방향성 곡면 스캐폴드(곡률·경사각의 설계 변수화, 오목부 착생 포켓/볼록부 에너지 흘림면, 급곡률 하중 집중 및 마모 속도 트레이드오프 설계 변수화, 스캐폴드 곡률 유지 전제) 실시 형태 추가, 생물 착생 유도 가능성 범주 한정, 얼음 파괴 흡수 에너지 항($E_{ice\_fail}$) 모델 추가, 항진 저항·와류 검증 필요성 표기. v1.96의 LS-DYNA 준용 가능 서술은 0.10절 미수행 고지로 대체.
-  - 8.2절 개정: US4351255, US4715305, US5325803 및 Lindqvist(1989) 빙저항 모델 공지기술 원용 표기(원문 확인 필요), 표현을 "본 문서가 개시하는 실시 형태의 범위"로 수정하여 겸양 기조 유지.
-* 전체 이력(v1.0~v1.97, 한글·영문 병기): 저장소의 [HISTORY.md](HISTORY.md) 참조
+### 0.1 이전 공개본에 대한 정정
+이전 공개본(v1.97까지, 2026-10-01 이전)에는 이 문서의 성격과 맞지 않는 서술이 있었다. 이번 개정에서 다음을 철회한다.
 
----
+* "창안자", "구상자", "원천 지적재산권 보유자", "최초 구상" 등 독창성·발명자성·IP 보유를 암시하는 서술
+* 선사용권, 영업비밀 분리, "4층 방어 체계" 등 권리 확보를 전제로 한 서술
+* 근거를 확인하지 못한 수치와 수식 (100ms 국소 격리, 재착생 속도식, 희생층 파쇄 효율 계수 등). 이들은 문헌 근거 없이 문서 정리 과정에서 들어간 것이며 이번 판에서는 싣지 않는다.
+* Apache-2.0 및 이전 비표준 라이선스 표기. 라이선스는 CC BY 4.0 단일로 정리한다.
 
-## 2. 풀스택 응용 구조 설계 (3-Tier Architecture)
+이전 공개본은 저장소 이력에 역사적 기록으로 남기되, 현재 판의 내용으로 보지 않는다.
 
-### [L2] 보호 인터페이스 레이어 (Protective Interface Layer)
-* 갑판 스플래시 구간 (Zone A) — 고속 항해 및 파도 파쇄 시 발생하는 해수 비산(Splash), 비산염분, 상부 유빙 조각의 충격을 일차적으로 완화하며 염분 침투를 억제한다.
-* 선수 구간 (Zone B) — 전진 항해 시 극지 유빙과의 직접적 고출력 충돌 에너지 및 수평 마찰력을 분산·흡수한다.
-* 선미 구간 (Zone C) — 후진 쇄빙 작업 및 프로펠러 회전에 의한 유빙 역류 충격, 와류 마찰로부터 추진 유닛 하우징 및 러더 주변 외판을 보호한다.
-* 회전체 구간 (Zone Aero) — 헬기 로터 및 항공기 흡기 전면부의 입자 충돌 하중을 어블레이티브 방식으로 흡수하며 대칭 자율 박리를 통해 회전 편심 하중을 완화한다.
+### 0.2 이 문서가 하는 일과 하지 않는 일
+이 문서는 "갑판 스플래시·선수·선미처럼 상시 해수·유빙에 닿는 구간과 회전체 앞날이 닳는 문제를 다룬 기존 공개 문헌과 특허, 상용 제품, 규정"을 주제별로 모아 정리한 것이다. 작성자는 새로운 기술을 설계하거나 소유를 주장하지 않는다. 각 기술의 공로는 원 문헌의 저자, 발명자, 기관, 제조사에 100% 귀속된다.
 
-### [L1] 희생·재생 패브릭 레이어 (Sacrificial & Regenerative Fabric Layer)
-* 하부 뼈대 구조 — CWP 기반의 롤링 및 클램핑 고정 기법이 적용된 표면 요철 스캐폴드(Scaffold) 구조체로서, 모선 및 표면에 하중을 균일하게 분산시킨다.
-* 표면 살 구조 — 의도적 유도, 자연적 착생 방치, 생물학적 유도물질 미도포 상태에서의 자생적 부착 유지, 합성 $CaCO_3$ 모사체를 포함하는 모든 형태의 $CaCO_3$계 석회질 형성물(따개비, 홍합, 굴 등) 또는 정밀 비생물 어블레이티브 카트리지 희생층이다.
-* 자가재생 및 퀵 교체 알고리즘 — 충격으로 인한 희생층 국소 탈락 발생 시, 생물학적 자가 재부착을 유도하거나 무공구 퀵 릴리즈 교체 수명 주기를 추정한다.
+작성자의 직접 경험은 금속 판재 가공과 설비 시공 분야에 한정된다. 해양·극지·항공 관련 서술은 모두 공개 문헌에 기댄 정리이며 해당 분야 전문가의 검증을 받지 않았다.
 
-### [L0] 인프라 및 고정 레이어 (Infrastructure & Fastening Layer)
-* 모선 및 구조체 — 선체 외판, 불워크 외현, 아이스벨트 보강재, 프로펠러 덕트 노즐 외측면, 러더 전방 방어면, 항공기 로터 프레임을 포함한다.
-* 고정 메커니즘 — 모재 용접이나 관통 구멍을 배제하고, 에지 클램핑, 롤링 락 및 원터치 슬롯 구조를 통해 0점 고정력을 유지한다.
+### 0.3 출발 질문
+갑판 외측 해수 접촉 구간과 쇄빙선 선수·선미는 계속 깨지고 닳는데, 도장과 강판 교체만으로 대응하는 것이 최선인가. 이 질문 주변에 이미 어떤 연구와 기술이 있는지 정리하는 것이 이 문서의 출발점이다.
 
-### 2.5 AI 역할 및 모델 구조 정의
-본 시스템에 적용되는 부착 및 탈락 예측 모듈은 특정 소프트웨어 프레임워크나 특정 알고리즘 구조에 국한되지 않는다. 온디바이스 엣지(Edge) 컴퓨팅 자원, 경량화 추론 모델(SLM), 위성 연동형 중앙 서버 분석 모델을 포괄하는 추상화된 예측 주체로 정의된다. 수온, 염분, 유속, 충돌 빈도, 회전 편심 하중 데이터를 실시간 수집·분석하여 수명 및 교체 주기를 유연하게 산출하는 것을 지향한다.
+### 0.4 법적 지위
+이 문서는 법정 선급 검사, MARPOL, IMO 협약·지침, 각국 규정을 대체·변경·면제하지 않는다. 문서 내 기술 서술은 공개 문헌의 요약이며 성능이나 적합성을 보장하지 않는다.
 
 ---
 
-## 3. 핵심 시스템 블록 및 동작 메커니즘
+## 1. 주제별 선행 문헌 정리
 
-### A. 3점 앵커 감지부 및 회전체 감지부 (절대 보호점)
-* Zone A (갑판 스플래시 방어선), Zone B (선수 아이스벨트 방어선), Zone C (선미 추진부 방어선) 및 Zone Aero (회전체 균형 방어선)를 절대 보호점으로 지정한다.
+> 확인 수준 표기: **[본문]** 해당 문헌의 본문·초록·특허 서지를 열람, **[요약]** 검색 결과의 요약·초록 수준만 확인, **[인용]** 다른 문헌의 인용 목록에서 확인. 모든 항목은 원문 재확인을 권한다.
 
-### B. 뼈대-살 분리형 희생 구조부 및 공학 수식 모델링
-* 외부 입력 조건 — 유빙 물리 충격, 해수 마찰, 비산염분, 항공 고속 입자 마찰 하중이 동시에 작동한다.
-* 동적 처리 메커니즘 — 외부 충격 발생 시 표면 따개비, 홍합, 굴, 자생적 부착 생물층, 합성 $CaCO_3$ 모사체 등 석회질 희생층 및 어블레이티브 카트리지가 자체 파쇄·탈락하면서 운동 에너지를 열 및 위치 에너지로 전환하여 소멸시킨다. 하부 스캐폴드는 변형 없이 잔존한다.
-* 점진 마모형 및 방향성 곡면 스캐폴드 실시 형태 (Gradual Wear & Directional Curved Scaffold)
-    * 점진 마모형 실시 형태 — 희생층의 소진 및 파쇄가 단일 충격으로 전면 탈락하는 것을 완화하기 위해, 층별 경도 구배(Hardness Gradient)를 부여하거나 사전 분할된 셀(Pre-segmented Cell) 구조를 적용할 수 있다. 분할된 점진 마모 구조는 대형 생물 조각의 일시 탈락 위험을 일부 완화할 수 있으나, 탈락 파편의 개체 수(비산 조각 수)를 증가시킬 수 있으므로 생물안전 및 확산 위험 측면에서의 종합적 이점은 **미검증** 상태로 다루어진다. 희생층의 마모 속도는 빠를수록 교체 주기가 짧아지고 느릴수록 완충 지속 효과가 약해지는 관계에 있으며, 이 트레이드오프는 **설계 변수**로 다루어진다.
-    * 방향성 곡면 스캐폴드 실시 형태 — 하부 스캐폴드 뼈대는 단면 곡선 및 평면 곡선을 포함하는 방향성 곡면 형상으로 구성될 수 있다. 곡면의 곡률(Curvature), 경사 시작각(Start Angle), 경사 끝각(End Angle) 등 기하학적 치수는 설치 위치별 해수 유속 및 빙하중 조건에 따라 설정되는 **설계 변수**이며, 직선 경사 구조는 곡률이 0인 특수 실시 형태에 해당한다. 외부 충격 소진 과정에서 하부 스캐폴드는 국소 파손 전까지 지정된 곡률 기하 형상을 유지하며, 상부 희생층만 선택적으로 소진되는 것을 전제로 한다.
-        * 오목부(Concave Zone) — 해수 유동을 완화하여 생물 포자 안착 및 $CaCO_3$ 착생을 유도하는 착생 포켓으로 기능한다. 생물 착생은 기술적으로 "유도 가능성"의 범위까지만 지향하며, 정밀한 제어가 필요한 구간에는 생물이 없는 비생물 카트리지 희생층을 적용한다.
-        * 볼록부(Convex Zone) — 외부 물리 충격을 1차 수용하고 수평 충돌 에너지를 측면으로 유도하는 에너지 흘림면으로 기능한다.
-    * 곡률 집중 및 국소 마모 가속 — 곡면의 곡률이 과도하게 급할 경우 특정 위치에 국소 하중 집중이 발생할 수 있으며, 이로 인한 마모 속도 증가 및 수명 감소 간의 관계는 곡률 설계 시 반영되는 **설계 변수 트레이드오프 항목**이다.
-    * 곡면·경사의 유체 저항 및 와류 영향 — 스캐폴드 표면의 곡률 및 경사 구조가 모선의 항진 저항 및 와류 형성(Vortex Generation)에 미치는 영향은 수조 시험 및 CFD 유체 해석을 통해 별도로 정량 검증되어야 하는 **별도 검증 항목**이다.
-    * 극지·유빙 구간 착생 조건 — 극지 및 유빙 항해 구간에서 해수 부착 생물이 자생적으로 착생하여 유지될 수 있다는 전제는 **미검증 가정**으로 다루어진다.
+### 1.1 부착 생물을 보호층으로 보는 연구 (Bioprotection)
+조간대 암반과 콘크리트 구조물에서 따개비·홍합·굴 등이 풍화와 침식을 줄이거나 늦춘다는 연구가 이미 축적되어 있다.
 
-* 1. 충격 에너지 감쇄 모델 (Sacrificial Energy Absorption with Ice Failure)
-    * 유빙 및 입자 충돌 운동에너지 공식:
-      $$E_{ice} = \frac{1}{2} m_{ice} v^2$$
-    * 희생층 파쇄 흡수 에너지 공식:
-      $$E_{sac} = \eta \cdot \sigma_c \cdot A \cdot t$$
-      (주요 변수 — $\sigma_c$: 희생층 압축강도, $A$: 충돌 면적, $t$: 희생층 유효 두께, $\eta$: 파쇄 효율 계수)
-    * 유빙 자체 파괴 흡수 에너지 항 (신설):
-      $$E_{ice\_fail}$$
-      유빙 충돌 시 얼음 내부의 굽힘, 전단 및 압괴 현상에 의해 소비되는 에너지 항으로서, 물리적 빙하중 특성 공식 준용에 따른 세부 수식 정립이 필요하다. (원문 및 정량적 계수 검증 필요)
-    * Zero-Downtime 핵심 생존 조건식:
-      $$E_{scaffold} = E_{ice} - E_{sac} - E_{ice\_fail} < E_{yield\_scaffold}$$
-      충돌 발생 시 전체 운동에너지에서 희생층 파쇄 에너지($E_{sac}$)와 얼음 자체 파괴 에너지($E_{ice\_fail}$)가 차감된 잔여 에너지가 하부 스캐폴드의 항복 에너지를 넘지 않도록 설계함으로써 뼈대의 원형을 보존한다. (빙하중 압력-면적 관계식 및 파쇄 메커니즘 연동 — **원문 및 구체 수식 확인 필요**)
+* 고착성 석회질 생물(따개비, 석회질 관형 환형동물, 홍합, 굴)이 기질 표면에 단단하고 거친 층을 만들어 보호 역할을 한다는 총설이 있다 (콘크리트 자산의 생물 열화·생물 보호 총설, ScienceDirect Topics 요약 [요약]).
+* 따개비가 암석 아표면(sub-surface)의 풍화를 줄이는 보호 역할을 하며 그 효과가 수 cm에서 수십 km 규모까지 일반화된다는 현장 실험이 있다 (Bioerosive and bioprotective role of barnacles on rocky shores, 이탈리아 북서부, *Science of the Total Environment* [요약]). 같은 연구군에서 초기 현장 실험은 따개비 피복이 간접적·중립적 또는 약한 생물침식 역할을 보였다는 결과(Pappalardo 외, 2016)도 있어 결과가 일관되지는 않다.
+* 홍합 제거 실험에서 표면 경도가 5개월간 약 10% 감소했다는 보고 (Gonzalez 외, 2021, 아르헨티나 해안 *Brachidontes rodriguezii* [요약]). 청색 홍합(*Mytilus edulis*)의 유사한 보호 효과 연구도 있다 (Baxter 외, 2022 [요약]).
+* 따개비가 열적 완충(Coombes 외, 2017)과 미세균열 봉합(Chlayon 외, 2018)에 기여한다는 서술이 위 문헌들에서 인용된다 [인용].
+* 따개비와 박테리아 막이 콘크리트 염화물 침투 저항을 함께 높인다는 연구 (Combined protective action of barnacles and biofilm on concrete surface in intertidal areas, *Construction and Building Materials* [요약]).
+* 굴의 부착 분비물은 대부분 무기질이고 산 용해에 강해 사후에도 보호 생물층으로 남을 수 있다는 서술 (Burkett 외, 2010; Tibabuzo Perdomo 외, 2018 인용 [인용]).
+* 생물 부착이 구조물에 "열화"를 주는지 "보호"를 주는지는 오래 논쟁되어 온 주제이며, 이 논쟁이 구조물의 부착생물 관리 방침에 영향을 준다고 위 문헌들이 밝히고 있다 [요약].
+* 굴 방파제 초(礁)가 침식을 줄였다는 현장 실험 (방글라데시 쿠투브디아 섬, 초 후면 침식 약 50% 안팎 감소 보고, *Scientific Reports* 2019 [요약]). 벨기에 Coastbusters 등 자연기반 해안 보호 프로젝트도 있다 (*Environmental Monitoring and Assessment* 2024, DOI 10.1007/s10661-024-12480-x [요약]).
 
-* 2. 재착생 속도 추정 모델 (Biogenic Growth Rate)
-    * 자가재생 피복율 성장 방정식:
-      $$\frac{dC}{dt} = r(T,S) \cdot C \cdot \left(1 - \frac{C}{K_{max}}\right) \cdot f(R_a)$$
-      (주요 변수 — $C$: 피복율 (Coverage %), $K_{max}$: 최대 포화 피복율, $f(R_a)$: 스캐폴드 표면 조도 함수)
-    * 환경 변수 성장률 공식:
-      $$r(T,S) = r_0 \cdot Q_{10}^{\frac{T-T_0}{10}} \cdot \exp\left(-\alpha (S - S_{opt})^2\right)$$
-      ($T$: 수온, $S$: 염분, $S_{opt}$: 환경별 최적 염분값. 본 수식은 개별 해역 조건에 따른 재생 주기의 유연한 추정에 활용될 수 있다.)
+정리: 부착 생물이 수동적으로 표면을 보호할 수 있다는 점은 해안생태공학에서 잘 알려진 주제다. 다만 대부분 조간대 암반·콘크리트·방파제 대상 연구이며, 쇄빙선 같은 이동 선체와 유빙 충돌 환경 대상 근거는 이번 조사에서 확인하지 못했다.
 
-* 출력 결과 — 모재 원판의 직접 손상을 완화하며, 희생층 탈락 영역에 대한 유지보수, 대칭 자율 박리 제어 및 재부착 상태 모니터링 신호를 생성한다.
+### 1.2 부착 생물을 유도하는 상용 제품·특허
+* **ECOncrete**: 2012년 해양생물학자 두 명(Perkol-Finkel, Sella)이 설립. 생물 친화 콘크리트 혼화제, 거친 표면 질감, 3D 형상을 조합해 착생을 촉진하고 그 "생물 보호"로 내구성을 높인다고 제조사가 설명한다. 하이파 항 방파제 Antifer 블록 24개월 모니터링 논문 (*Ecological Engineering*, "Blue is the new green" [요약]), Coastalock 피복 블록, 생물 활성 벽 타일 등이 있다 [제조사 자료].
+* **Living Ports (EU Horizon 2020, 2021.06~2024.05)**: 비고 항(Port of Vigo)에서 ECOncrete 해안 피복·안벽을 실증하고 DTU가 모니터링 (CORDIS 970972 [요약]).
+* **Living Seawall (샌프란시스코만)**: 스미소니언 환경연구센터(SERC)와 샌프란시스코 항만청이 일반·생물 강화·질감 타일을 비교하는 실험 [요약].
+* **특허 RE42259 "Biologically-dominated artificial reef"**: 굴·홍합·따개비 등 고착 생물의 성장을 이용해 침식을 줄이는 인공 초 구조 [요약].
 
-### C. 자가재생 및 주기 최대한 연장 명세
-* 동작 연속성 범위 — 충격 직후 초동 생물 포자 부착 단계부터, 연속 동작 및 무공구 퀵 릴리즈 카트리지 교체 범위를 모두 포함한다. 절대적인 영구 동작을 보장하지 않으며 유지보수 주기의 연장을 지향한다.
+정리: 해안 구조물에서 부착 생물 유도와 보호를 결합한 제품은 이미 상용화·실증 단계에 있다. 이쪽은 정박·고정 구조물 대상이다.
 
-### D. 무중단 장애 이관 및 대칭 자율 박리
-* 결함 격리 및 균형 동작 — 특정 구획의 희생층이 파손되는 경우 100ms 이내에 동적 제어를 국소 격리하고, 회전체 적용 시 대칭 위치의 카트리지를 미세 자율 박리(Self-balancing)하여 편심 진동을 완화하는 것을 포함한다.
+### 1.3 희생·어블레이티브 층
+**선박 방오도료 (자기연마형, Self-Polishing Copolymer)**
+* 해수에서 폴리머가 가수분해되며 표면이 서서히 마모·갱신되는 방식의 방오도료가 오래 쓰였다. 초기 주석(TBT) 계열은 IMO AFS 협약(2001 채택, 2003 신규 도장 금지, 2008 선체 사용 금지)으로 금지되었고, 이후 실릴 에스테르 아크릴 계열 무주석 SPC가 주류다 (특허 US8575231 서술, Kiil 외 모델 논문, *Tin-free self-polishing marine antifouling coatings* [요약]).
+* 폴리싱 속도는 유속·온도·화학 조성에 따라 달라지며 월 수 µm 수준의 실측·모델 보고가 있다 [요약].
+* 이들은 살생물질 방출이 전제인 경우가 많아 이 문서가 다루는 구조적 희생층과 목적이 다르다. 쇄빙선용으로는 제조사가 방오·오염 방출 도료가 얼음 접촉 선체에 적합하지 않다고 설명하는 자료도 있다 (Ecospeed 제조사 자료 [제조사 자료]).
 
----
+**회전익·프로펠러 앞날 침식 보호 (교체형 희생 부품)**
+* US5542820 "Engineered ceramic components for the leading edge of a helicopter rotor blade" (1996): 니켈 앞날 캡이 정비창에서 교체되고, 모래 침식을 줄이려 탄성 희생 테이프를 쓰는 것이 선행 관행으로 서술되며, 교체형 팁 세그먼트에 세라믹 부품을 접합 [본문].
+* US8858184B2 "Rotor blade erosion protection system" (2011 출원): 마모되면 제거·교체하는 금속 희생 침식 스트립이 일반적이라고 서술하고 서멧 코팅 방식의 보수 가능한 보호 시스템을 제시 [본문].
+* US9429025B2 / US20130101432A1 / EP2585370A2 "Erosion resistant helicopter blade": 앞날 실드에 충격 저항층과 침식 저항층을 겹치는 구조 [본문].
+* US20100008788A1 "Protector for a leading edge of an airfoil": 바깥 침식 저항 부재와 그 아래 에너지 흡수 부재를 겹친 앞날 보호구 [본문].
+* US5782607 "Replaceable ceramic blade insert": 프로펠러 블레이드 앞날 보호 시스에 침식이 가장 큰 바깥쪽에 교체형 세라믹 인서트를 넣는 구조 [본문].
+* US20050169763A1 "Helicopter rotor and method of repairing same": 폴리우레탄 앞날 스트립으로 보수 [본문].
+* 인용 목록에서 확인한 관련 문헌: US7246998B2 "Mission replaceable rotor blade tip section", US5885059A "Composite tip cap assembly for a helicopter main rotor blade", EP3275783B1 "Rotor blade erosion protection systems" [인용].
 
-## 4. 동적 자원 관리 및 방어적 안전 제어
+정리: "닳도록 설계한 교체형 앞날 보호재"는 회전익·프로펠러 분야에 특허가 많은 성숙한 영역이다.
 
-본 절(4장)의 제어 격리 규정(Rate Limiter, Tri-State Isolation)은 2.5의 AI 예측 모듈 및 센서 서브모듈에 한정하여 적용된다. 수동 기계식 희생 구조체(L2/L1/L0)에는 본 규정이 적용되지 않으며, 해당 구조체의 결함 완화는 0.3절의 분할 독립 고정 구조 원칙을 따른다.
+### 1.4 쇄빙선 아이스벨트: 선형·재료·코팅
+**선형·기하 (곡면과 경사로 얼음을 굽힘 파괴시키는 접근)**
+* US4715305 "Ship's hull" (Wärtsilä, 1984 우선, 1987 등록): 쇄빙 선체 형상 [본문: 서지 및 인용 관계].
+* US5176092 "Icebreaker bow and hull form" (Newport News Shipbuilding, 1993): V자형 선수와 S자형 선수재, 하부 쐐기 [본문].
+* US4436046 "Ice-breaking hull": 선수 양측의 경사 융기로 얼음 조각을 선체 아래에서 벗어나게 하는 편향 구조 [요약].
+* US5325803 "Icebreaking ship" (독일 DE4101034 우선권): 발코니형 측면 플랭크와 난간을 가진 선체 [본문]. ※ 이전 개정판은 이 특허를 "곡면·경사로 굽힘·전단 파괴를 유도하는 선형"으로 묶어 인용했으나, 이번에 확인한 서술은 측면 플랭크 구조 중심이다. 인용 취지를 원문으로 다시 확인해야 한다.
+* CA1311393C "Icebreaker": 선체 열원으로 외판을 데워 얼음 마찰·점착을 줄이는 구조 [본문].
+* US5660131 "Icebreaker attachment" (Marinette Marine, 1997): 모선에 선택적으로 결합·분리하는 쇄빙 부가 구조. 선체 규모의 착탈 모듈이라는 점에서 이 문서의 주제와 가까운 선행 사례다 [본문].
+* ※ 이전 개정판이 인용한 US4351255는 이번 조사에서 확인하지 못했다. 확인 전까지 인용하지 않는다.
 
-* Rate Limiter (충격 빈도 정속화 제어) — 연속 충돌 발생 시 고정부에 가해지는 과도한 피로 하중 스파이크를 완화하여 전달 하중을 안정화한다.
-* Tri-State Isolation (3상 제어 격리) — 센서 또는 고정부 이상 검출 시 0.1초(100ms) 이내에 고임피던스(High-Impedance) 상태로 전환하여 메인 제어계로의 오류 전파를 억제한다.
+**아이스벨트 재료·코팅 (상용 기술)**
+* 선급(Lloyd's Register, DNV, 러시아 선급 등)은 얼음 마모에 대비해 아이스벨트 강판 두께를 증가시키도록 규정하고, 일부는 인증된 내마모 코팅의 효과를 인정한다 (Intershield 163 / Inerta 160, AkzoNobel 제품 자료 [제조사 자료]).
+* PPG SIGMASHIELD 1200은 쇄빙선 네 척에 적용되어 잠수 검사에서 수직 측면 손상이 없었다고 보고되었다 (BIC Magazine [제조사 사례]).
+* Ecospeed (Subsea Industries)는 아이스벨트 판 두께를 최대 1 mm 줄일 수 있다고 주장한다 [제조사 자료].
+* 러시아 원자력 쇄빙선 Leader(프로젝트 10510)는 약 50 mm 강판에 5 mm 스테인리스를 입힌 클래드강 아이스벨트를 적용하는 것으로 보도되었고, Arktika급(22220)은 클래드 대신 Inerta 계열 에폭시 코팅을 사용한다 (Nuclear Engineering International [요약]). 폭발 용접 스테인리스 아이스벨트(Botnica 사례)는 2차 자료에서 확인했다 [2차 자료].
+* US10774396 "Seawater-resistant stainless clad steel": 스테인리스 클래드강의 마모·공식 저항을 다루며, 따개비가 붙은 틈에서의 부식 저항 문제를 언급한다 [본문].
+* US4968538, US4789567 "Abrasion resistant coating and method of application": 세라믹 입자를 내식 수지에 분산한 내마모 코팅 [요약].
 
----
+**빙하중·빙저항 모델**
+* Lindqvist (1989), "A straightforward method for calculation of ice resistance of ships", *Proc. 10th POAC*, Luleå, vol. 2, pp. 722–735: 빙저항을 압괴(crushing), 굽힘(bending), 침하(submersion) 성분으로 나누는 모델. 이후 Riska 등(1997)이 수정 [요약].
+* 압력-면적 관계: Sanderson (1988)의 자료 편집, Masterson & Frederking (1993)의 국부 빙압 편집. 접촉 면적이 커질수록 국부 빙압이 줄어드는 면적 효과를 정리했고, 설계 코드(API RP 2N, CSA S471)에는 p = 8.1·a^-0.5 (p: MPa, a: m²) 형태의 관계식이 쓰인다고 후속 논문이 인용한다 (*Cold Regions Science and Technology* [요약]). Palmer & Sanderson (1991)은 프랙탈과 선형 탄성 파괴역학으로 이 효과를 설명했다 [인용]. 면적 효과의 정의와 적용에는 논쟁이 있다 [요약].
 
-## 5. 표준 활용 및 법적 경계 명시
+정리: 곡면·경사 선형, 내마모 코팅, 클래드강, 빙저항 모델은 모두 이미 공개된 선행 영역이다. 아이스벨트 위에 "교체형·마모형 희생 모듈"을 얹는 접근에 직접 해당하는 문헌은 이번 조사에서 확인하지 못했다 (없다는 뜻은 아니다. 5장 참조).
 
-* 공공 표준 준용 — ISO 8501 표면 청정도 기준, 선급 Ice Class Rules, IMO AFS 및 EU MSFD 지침을 참고 지표로 준용한다.
-* 규제 비대체성 — 본 시스템은 의무 설치 구조 보강재, 법정 방오 도료, IMO 부착생물 관리 지침(MEPC.207(62)) 및 기항국의 부착생물·생물안전 규정을 대체하거나 면제하지 않는다. 규제 준수는 실제 구현·운용 주체가 확인하며(0.7, 0.9, 0.10절 참조), 상세한 준수 권고는 0.9절에 통합하여 고지한다.
+### 1.5 용접 없이 클램프로 부착하는 해양 구조물
+* CN104314061A "Detachable ice-resistant device applicable to offshore nuclear power platform": 반원통 구조로 파일 다리를 클램프하고 자체 잠금으로 결합·분리하며, 반복 설치·철거와 굽힘 파괴 유도 콘으로 빙하중을 줄이는 구조 [본문]. 이 문서가 다루는 "무용접 클램프 부착 + 얼음 굽힘 파괴 유도"에 가장 가까운 선행 사례다.
+* EP2275677A2 "Device for reducing ice loads on a pile foundation for an offshore wind turbine": 파도·바람 하중을 늘리지 않도록 투과형 버팀 구조로 만든 아이스콘 [본문].
+* US20110006538A1 / EP2185816A1 / WO2009026933A1 "Monopile foundation for offshore wind turbine": 2차 구조물을 파일 둘레에 클램프로 조여 고정하고, 볼트 대신 클램프를 쓰면 충격에도 덜 파손된다고 서술 [본문].
+* US5079805 "Fastener for protective sleeves": 부두 파일을 부식·부패·해양 생물 부착으로부터 보호하는 슬리브를 감싸고 고정하는 체결구 [본문].
+* WO2016095052A9 "Composite sleeve for piles": 동결 부착(adfreeze) 상승 하중을 줄이는 복합 슬리브, 상단 잠금에 볼트·용접 칼라·클램프 사용 [본문].
 
----
+정리: 파일·각주 둘레 클램프형 보호 슬리브, 착탈식 아이스콘은 선행 사례가 다수 있다. 선체 외판 위 클램프형 모듈의 직접 사례는 US5660131(선체 규모 부가 구조) 외에는 이번에 확인하지 못했다.
 
-## 6. 미래 적용 및 산업 확장 범위
-
-* 스마트 항만 방파제, 해상풍력 기초 세굴 보호, CWP 부유체 및 헬기/항공기 로터 블레이드 전면 보호층으로의 확장을 지향한다.
-
----
-
-## 7. 실리보호 (Practical Protection)
-
-* 4층 방어 체계 (Quadruple Defense Architecture)
-    * 타임스탬프 체계 — 타임스탬프 기반 선행 구상 시점 증명.
-    * 표준 이원화 라이선스 — 저작권(CC BY 4.0) 및 파생 코드/구현물(Apache-2.0) 표준 라이선스 이원화 적용으로 타 주체의 사적 독점화 방지 (기존 DPL v1.0 표기는 전면 대체됨).
-    * 선사용권 보유 — 대한민국 특허법 제103조 및 미국 특허법 35 U.S.C. §273에 따른 현장 적용 및 시제품 제작 행위에 대한 법적 선사용권(Prior Use Right) 유지.
-    * 영업비밀 분리 — 원천 개념은 공개 백서로 방어하되, 세부 가중치 및 구체적 치수는 영업비밀(Trade Secret)로 분리하여 비공개 보관한다.
-
----
-
-## 8. 출처 및 문서 완전성 선언 (Sources)
-
-### 8.1 소마모아 생태계 저장소 및 하위 백서 연계
-* **연계 생존 아키텍처 및 APU 제어기:** GitHub - `soma-moa / chiplet-apu-multi-system-survival-architecture`
-* **연계 CWP 4대 하드웨어 저장소:**
-  * GitHub - `soma-moa / CWP-Entry`
-  * GitHub - `soma-moa / CWP-Rolling-Self-Align-Battery-Swap-System`
-  * GitHub - `soma-moa / CWP-Battery-Swap`
-  * GitHub - `soma-moa / CWP-Clamping-Battery-Swap-System`
-* **최상위 관문:** `somamoa.ai.kr` (Canonical Gateway)
-
-### 8.2 규격, 판례, 공지기술 및 참고 문헌
-* **국제 표준 및 규격:** ISO 8501, IMO AFS Convention, EU MSFD, 각국 선급(KR, DNV, ABS) Ice Class Rules.
-* **선행 쇄빙 공지기술 및 빙저항 모델:**
-  * 곡면·경사 형상을 활용하여 얼음의 굽힘(Bending) 및 전단(Shear) 파괴를 유도하는 쇄빙 선형 및 기술 사상 (US4351255, US4715305, US5325803 등 특허 문헌 — **원문 확인 필요**)
-  * Lindqvist (1989) 빙저항 예측 모델 — 압괴(Crushing), 굽힘(Bending), 침하(Submersion) 성분 분리 해석 모델 (**원문 확인 필요**)
-  * 본 문서가 개시하는 실시 형태의 범위 — 본 백서가 제시하는 기술적 구성은 상기 공지된 경사·곡면 파쇄 기하 구조를 모선 외판 직접 용접이 아닌, "클램핑 스캐폴드 하부 골격 위에 후부착되는 희생·재생 모듈 실시 형태"로 재구성하여 구현하는 범주에 해당한다.
-* **부착생물 관리 관련 지침 및 규정:** IMO Resolution MEPC.207(62) (2011 Guidelines for the control and management of ships' biofouling to minimize the transfer of invasive aquatic species, 2011년 7월 채택), 뉴질랜드 1차산업부(MPI) Craft Risk Management Standard (선박 입항 시 부착생물 관리), California Code of Regulations, title 2, section 2298.1 et seq. (Biofouling Management Regulations). (각 규정의 현재 요건은 원문 확인 필요)
-* **생물막 및 이매패의 미생물 축적 관련 문헌:** Drake LA 외 (2005) *Biological Invasions* 7:969-982; Drake LA, Doblin MA, Dobbs FC (2007) *Marine Pollution Bulletin* 55:333-341, DOI 10.1016/j.marpolbul.2006.11.007; Martinez-Albores A 외 (2020) *Foods* 9(2):129; McLeod C 외 (2017) *Comprehensive Reviews in Food Science and Food Safety* 16(4):692-706; Revilla-Castellanos VJ 외 (2015) "Pathogenic *Vibrio parahaemolyticus* isolated from biofouling on commercial vessels and harbor structures", *Biofouling* 31(3):275-282, DOI 10.1080/08927014.2015.1038526; Georgiades E, Scianni C, Tamburri MN (2023) "Biofilms associated with ship submerged surfaces: implications for ship biofouling management and the environment", *Frontiers in Marine Science* 10:1197366 (정책 브리프); Scianni C 외 (2023) "Balancing the consequences of in-water cleaning of biofouling to improve ship efficiency and reduce biosecurity risk", *Frontiers in Marine Science* 10:1239723 (정책 브리프). (초록 기준, 원문 확인 필요)
-* **방오도료 및 방오 시스템의 환경 영향 관련 자료:** IMO, International Convention on the Control of Harmful Anti-fouling Systems on Ships (AFS, 2001년 채택, 2008년 발효, 본문 제1조(3) 인용); 유럽해사안전청(EMSA), Anti-fouling 안내 페이지; Thomas KV, Brooks S (2010) "The environmental fate and effects of antifouling paint biocides", *Biofouling* 26(1):73-88, DOI 10.1080/08927010903216564; Konstantinou IK, Albanis TA (2004) "Worldwide occurrence and effects of antifouling paint booster biocides in the aquatic environment: a review", *Environment International* 30:235-248, DOI 10.1016/S0160-4120(03)00176-4; Alzieu C (2000) "Environmental impact of TBT: the French experience", *Science of the Total Environment* 258:99-102. (초록 기준, 원문 확인 필요)
-* **탈락 물질(방오도료 입자)의 환경 영향 관련 자료, 유추 근거:** Soroldoni S, Castro IB, Abreu F, Duarte FA, Choueri RB, Möller OO Jr, Fillmann G, Pinho GLL (2018) "Antifouling paint particles: Sources, occurrence, composition and dynamics" (학술지·권·면·DOI 확인 필요); "Environmental pollution with antifouling paint particles: Distribution, ecotoxicology, and sustainable alternatives" (2021), *Marine Pollution Bulletin* 169:112529 (저자·DOI 확인 필요); "Paint particles in the marine environment: An overlooked component of microplastics" (2021), PMID 34401707 (저자·학술지·DOI 확인 필요). 이들은 살생물질을 함유한 방오도료 입자에 관한 것이며, 살생물질이 없는 어블레이티브 카트리지 재질에 대한 직접 근거는 아니다. (초록 기준)
-* **수중 세척의 생물·오염물질 방출 관련 자료:** Tamburri MN, Georgiades ET, Scianni C, First MR, Ruiz GM, Junemann CE (2021) "Technical Considerations for Development of Policy and Approvals for In-Water Cleaning of Ship Biofouling", *Frontiers in Marine Science* 8:804766, DOI 10.3389/fmars.2021.804766 (정책 브리프); Woods CMC, Floerl O, Jones L (2012) "Biosecurity risks associated with in-water and shore-based marine vessel hull cleaning operations", *Marine Pollution Bulletin* 64:1392-1401, DOI 10.1016/j.marpolbul.2012.04.019 (NIWA 요약 기준, 선박 36척 비교에서 수동 수중 세척 후 생존 개체 비율이 건선거·육상 인양보다 높았음); Floerl O, Norton N, Inglis G, Hayden B, Middleton C, Smith M, Alcock N, Fitridge I (2005) "Efficacy of hull cleaning operations in containing biological material I. Risk assessment", MPI Technical Paper No. 08/12 (뉴질랜드 1차산업부 기술 보고서); Georgiades 외 (2023), Scianni 외 (2023) 정책 브리프(위 참조). (초록·요약 기준, 원문 확인 필요)
-* **공지기술 원용:** Béla Barényi (1951), Automotive Passive Safety Architecture (Crumple Zone & Airbag).
-* **법적 근거:** 대한민국 특허법 제103조, 미국 특허법 35 U.S.C. §273.
-* **문서 완결성:** 본 문서는 단위 명세서로서 독자적인 기술적 완결성을 가진다.
-* **원안 우선 조항:** 한국어 원문이 기준 원본(Original Authority)이며, 타 언어 번역본에서 해석 충돌 발생 시 한국어 원문의 서술과 정의를 최우선으로 적용한다.
-
-### 8.3 저작권 및 라이선스 고지 (Copyright & License Notice)
-본 문서의 텍스트 표현물은 Creative Commons Attribution 4.0 International (CC BY 4.0)에 따라 공개되며, 파생 코드 및 실행 구현물에는 Apache License 2.0 (Apache-2.0)을 이원화 적용한다. 저자(deundeuni / soma-moa)는 본 문서에 기술된 아이디어에 대해 어떠한 배타적 특허권도 주장하지 않는다. 상세 라이선스 조건은 본 저장소의 LICENSE 파일을 따른다.
+### 1.6 구조적 희생 사상의 일반 배경
+* Béla Barényi (1951), 자동차 수동안전(크럼플존) 개념. 충격 에너지를 구조 변형으로 소산시키는 사상의 고전적 배경으로 인용한다.
 
 ---
 
-## Appendix A: Inventorship
-* Primary Inventor / System Architect: deundeuni (소마모아 soma-moa / github.com/soma-moa)
+## 2. 부착 생물을 쓸 때의 환경·생물안전 논점 (선행 문헌 요약)
 
-## Appendix B: Version History
-* 전체 이력은 HISTORY.md(한글·영문 병기)에서 관리한다. See HISTORY.md.
+부착 생물을 보호층으로 쓰는 접근은 선박에서는 외래종 이동 문제와 직접 충돌한다. 아래는 이전 판에서 정리한 문헌을 유지·요약한 것이며, 주장이 아니라 알려진 한계의 기록이다.
 
-## Appendix C: AI Assistance Disclosure
-* Technical & Legal Drafting Support: Generic Generative AI Text Refinement & Structuring Tools (범용 생성형 AI 텍스트 정제 및 구조화 도구)
+* **국제 지침**: IMO는 2011년 결의 MEPC.207(62)로 선박 부착생물의 통제·관리 지침을 채택했고, 선체 부착생물을 외래 수생생물 이동의 중요한 경로로 서술한다.
+* **기항국 규정**: 뉴질랜드 1차산업부(MPI)의 Craft Risk Management Standard가 2018년부터 입항 선박 선체에 부착생물이 없을 것(대부분 점액층 정도만 허용)을 요구하는 것으로 알려져 있고, 미국 캘리포니아주는 선체 부착생물 관리 규정(California Code of Regulations, title 2, section 2298.1 et seq.)을 둔다. 세부 요건은 개정될 수 있어 실제 적용 전 확인이 필요하다.
+* **미생물 이동**: 선체 부착생물층에는 생물막이 함께 형성되며, 이매패는 여과 섭식으로 세균·바이러스를 축적할 수 있다는 문헌이 있다. 상선 외부 선체 부착생물에서 병원성 *Vibrio parahaemolyticus*가 검출되었다는 보고가 있다 (Revilla-Castellanos 외, 2015). 바이러스는 외부 선체 착생층을 직접 조사한 연구를 찾지 못했고 문헌 대부분이 밸러스트 탱크 내부나 오염된 연안·양식 조개류 대상이다. 존재와 병원성은 별개다.
+* **군집 단위 탈락**: 충격으로 부착 생물 군집 조각이 한꺼번에 떨어져 다른 해역에서 생존·착생할 수 있는지는 확인된 문헌이 없다.
+* **수중 세척**: 수중 세척이 생존 개체와 미생물 방출을 늘릴 수 있다는 정책 브리프와 NIWA 연구(Woods 외, 2012)가 있다.
+* **방식별 영향**: 살생물 방오도료는 비표적 생물에 화학적 영향을, 생물 착생 방식은 외래종·미생물 이동 가능성을, 비생물 어블레이티브 방식도 탈락 물질의 해양 환경 영향 평가를 각각 요구한다. 어느 쪽이 더 낫다고 단정하지 않는다.
+* **규제 준수**: 항로 전체(경유·기항 해역, 극지 특별 해역 포함)에 적용되는 협약·지침·국가 규정·선급 규칙을 확인해야 하며, 더 엄격한 요건을 우선 검토하는 것이 합리적이다 (AFS 협약 제1조(3)은 국제법에 부합하는 범위에서 국가가 더 엄격한 조치를 취하는 것을 막지 않는다).
 
-## Appendix D: Citation Format (CITATION.cff)
+---
+
+## 3. 확인 상태와 이전 판과의 차이
+
+| 항목 | 이번 조사 결과 |
+|---|---|
+| US4715305 | 서지·인용 관계 확인. Wärtsilä "Ship's hull" |
+| US5325803 | "Icebreaking ship"(발코니형 측면 플랭크). 이전 판의 "굽힘·전단 유도 선형" 설명과 취지가 다를 수 있어 재확인 필요 |
+| US4351255 | 확인하지 못함. 인용 보류 |
+| Lindqvist (1989) | 서지 확인 (POAC 1989, pp. 722–735). 수식 원문은 미열람 |
+| 압력-면적 관계식 | 후속 논문 인용 수준에서 형태 확인. 원문 미열람 |
+| 빙하중 압력-면적을 반영한 얼음 파괴 흡수 에너지 수식 | 이번 판에서 자체 수식을 삭제. 필요하면 위 문헌에서 직접 인용해야 함 |
+
+---
+
+## 4. 해석상의 메모 (정리자의 관찰, 주장 아님)
+
+* 요소 하나하나(생물 보호, 희생·교체형 보호재, 곡면 선형, 내마모 코팅, 클램프 부착)는 모두 별도의 선행 영역이 있다.
+* 이들을 "아이스벨트 위의 마모형·교체형 모듈 + 선택적 생물 착생층"으로 묶은 직접 일치 문헌은 이번 조사 범위에서 찾지 못했다. 이것은 "새롭다"는 뜻이 아니라 "이번에 못 찾았다"는 뜻이다.
+* 항공 회전체의 대칭 박리나 무공구 퀵릴리즈 카트리지와 직접 일치하는 문헌도 이번에 찾지 못했다. 다만 회전익 앞날 교체형 보호재(1.3절)는 이미 풍부하다.
+* 생물 착생 방식은 정박·고정 구조물에서는 선행 연구가 풍부하지만, 다해역 항해 선박에서는 2장의 규제와 충돌 소지가 있다. 이 점은 문헌이 보여주는 사실이다.
+
+---
+
+## 5. 조사 한계 및 미조사 항목
+
+* 이번 조사는 영문 위주의 검색 한 라운드이며, 중소업체·개인 출원과 한·중·러·일 문헌을 포함한 확장 검색 라운드는 수행하지 않았다. 앞으로는 동의어·업계 용어 변주로 추가 검증한다.
+* 이번에 검색하지 않은 항목: 광물 집적(Biorock 계열), 목선 시절 희생 외판(sheathing), 합성 탄산칼슘 모사체, 경도 구배 희생층·사전 분할 셀 구조, 곡면 스캐폴드 위 착생 포켓, 회전체 불균형 완화 관련 문헌, 해상 구조물 센서 모니터링.
+* 많은 항목이 요약·초록·제조사 자료 수준 확인이며 원문을 모두 읽지 않았다.
+* 구조 충돌 해석, 수조 시험, 클램프 피로·동결 시험 등은 수행하지 않았고 수행 계획도 없다.
+* 제조사 자료의 성능 수치는 해당 제조사 주장이다.
+
+---
+
+## 6. 참고 문헌 및 자료
+
+### 6.1 규격·협약·지침
+ISO 8501; IMO AFS 협약 (2001 채택, 2008 발효, 제1조(3)); EU 해양전략 프레임워크 지침(MSFD); 각국 선급(KR, DNV, ABS, Lloyd's Register) Ice Class 규칙; IMO Resolution MEPC.207(62) (2011); 뉴질랜드 MPI Craft Risk Management Standard; California Code of Regulations, title 2, section 2298.1 et seq.; API RP 2N; CSA S471.
+
+### 6.2 특허 (이번에 서지 확인)
+US4715305; US5325803; US5176092; US4436046; CA1311393C; US5660131; US5542820; US8858184B2; US9429025B2; US20130101432A1; EP2585370A2; US20100008788A1; US5782607; US20050169763A1; US7246998B2 [인용]; US5885059A [인용]; EP3275783B1 [인용]; US10774396; US4968538; US4789567; US8575231; US5472993; US4914141; CN104314061A; EP2275677A2; US20110006538A1; EP2185816A1; WO2009026933A1; US5079805; WO2016095052A9; RE42259.
+
+### 6.3 논문·총설
+* Lindqvist G (1989) A straightforward method for calculation of ice resistance of ships. *Proc. 10th POAC*, Luleå, 722–735.
+* Sanderson TJO (1988) *Ice Mechanics: Risks to Offshore Structures*; Masterson DM, Frederking RMW (1993) Local contact pressures in ship/ice and structure/ice interactions. *Cold Regions Science and Technology*; Palmer AC, Sanderson TJO (1991).
+* Bioerosive and bioprotective role of barnacles on rocky shores. *Science of the Total Environment*.
+* Combined protective action of barnacles and biofilm on concrete surface in intertidal areas. *Construction and Building Materials*.
+* The bioprotective properties of the blue mussel (*Mytilus edulis*) on intertidal rocky shore platforms.
+* Oyster breakwater reefs promote adjacent mudflat stability and salt marsh growth in a monsoon dominated subtropical coast. *Scientific Reports* (2019).
+* Nature-based solutions for coastal protection in sheltered and exposed coastal waters. *Environmental Monitoring and Assessment* (2024), DOI 10.1007/s10661-024-12480-x.
+* Perkol-Finkel S, Sella I, "Blue is the new green: Ecological enhancement of concrete based coastal and marine infrastructure". *Ecological Engineering*.
+* Kiil S 외, 자기연마 방오도료 동적 시뮬레이션 (*JCT Coatings Tech*); Tin-free self-polishing marine antifouling coatings (총설).
+
+### 6.4 부착생물·생물안전 관련 (이전 판 유지, 초록 기준, 원문 확인 필요)
+Drake LA 외 (2005) *Biological Invasions* 7:969-982; Drake LA, Doblin MA, Dobbs FC (2007) *Marine Pollution Bulletin* 55:333-341, DOI 10.1016/j.marpolbul.2006.11.007; Martinez-Albores A 외 (2020) *Foods* 9(2):129; McLeod C 외 (2017) *Comprehensive Reviews in Food Science and Food Safety* 16(4):692-706; Revilla-Castellanos VJ 외 (2015) *Biofouling* 31(3):275-282, DOI 10.1080/08927014.2015.1038526; Georgiades E, Scianni C, Tamburri MN (2023) *Frontiers in Marine Science* 10:1197366; Scianni C 외 (2023) *Frontiers in Marine Science* 10:1239723; Tamburri MN 외 (2021) *Frontiers in Marine Science* 8:804766, DOI 10.3389/fmars.2021.804766; Woods CMC, Floerl O, Jones L (2012) *Marine Pollution Bulletin* 64:1392-1401, DOI 10.1016/j.marpolbul.2012.04.019; Floerl O 외 (2005) MPI Technical Paper No. 08/12.
+방오도료 환경 영향: Thomas KV, Brooks S (2010) *Biofouling* 26(1):73-88, DOI 10.1080/08927010903216564; Konstantinou IK, Albanis TA (2004) *Environment International* 30:235-248, DOI 10.1016/S0160-4120(03)00176-4; Alzieu C (2000) *Science of the Total Environment* 258:99-102; Soroldoni S 외 (2018) 방오도료 입자 (서지 확인 필요); *Marine Pollution Bulletin* 169:112529 (2021, 저자 확인 필요).
+
+### 6.5 상용 제품·제조사 자료 (제조사 주장)
+AkzoNobel International Intershield 163 Inerta 160; PPG SIGMASHIELD 1200; Subsea Industries Ecospeed; ECOncrete 사례 자료; CORDIS Living Ports (프로젝트 970972); Port of San Francisco / SERC Living Seawall.
+
+### 6.6 공지기술 원용
+Béla Barényi (1951), 자동차 수동안전 개념(크럼플존).
+
+---
+
+## 7. 귀속·라이선스·작성 방식
+
+* 이 문서의 모든 기술적 내용의 공로는 위 문헌의 저자·발명자·기관·제조사에 있다. 작성자는 자료를 모아 정리했을 뿐이다.
+* 텍스트는 CC BY 4.0으로 공개한다. 인용·재사용 시 이 저장소와 원 문헌을 함께 밝히기를 권한다.
+* 작성 과정에서 범용 생성형 AI 도구를 텍스트 정리와 서지 검색에 사용했으며, 검수 의견을 반영해 작성자가 정리했다. 오류와 누락의 책임은 작성자에게 있다.
+* 이 문서의 서지·특허번호·수치에 오류가 있으면 알려주길 바란다. 확인되는 대로 정정한다.
+
+### CITATION.cff
 ```yaml
 cff-version: 1.2.0
-message: "If you use or reference this defensive publication framework, please cite it as below."
+message: "If you use or reference this literature review, please cite it as below."
 authors:
-  - family-names: "deundeuni"
-    given-names: "soma-moa"
-title: "Max-Life-Ice-Belt: Sacrificial Self-Regenerating Armor System with Clamping Scaffold for Icebreakers, Marine Structures, and Aero-Rotors"
-version: "1.97"
-date-released: 2026-10-01
-url: "[https://github.com/soma-moa/Max-Life-Ice-Belt](https://github.com/soma-moa/Max-Life-Ice-Belt)"
+  - alias: "deundeuni"
+    name: "soma-moa"
+title: "Max-Life-Ice-Belt: A Literature Review on Sacrificial Surface Layers for Marine, Polar and Rotating-Machinery Applications"
+date-released: 2026-10-04
+license: CC-BY-4.0
+url: "https://github.com/soma-moa/Max-Life-Ice-Belt"
 keywords:
-  - "Defensive Publication"
+  - "Literature Review"
   - "Prior Art"
-  - "Icebreaker Armor"
-  - "Bio-fouling Armor"
-  - "Zero-Downtime"
-  - "Ablative Cartridge"
-  - "Self-balancing Ablation"
-  - "Zero-tool Quick Replacement"
-  - "CaCO3 Eco-Armor"
-  - "Mussel Eco-Armor"
-  - "Oyster Eco-Armor"
-  - "Spontaneous Bio-Adhesion"
+  - "Ice Belt"
+  - "Bioprotection"
+  - "Sacrificial Layer"
+  - "Rotor Leading Edge Erosion"
+  - "Clamp-on Marine Structures"
+```
